@@ -1,0 +1,57 @@
+---
+layout: post
+status: publish
+published: true
+title: Useful batch files
+author:
+  display_name: Naguib Ihab
+  login: naguibihab
+  email: nick@anideaforanapp.com
+  url: ''
+author_login: naguibihab
+author_email: nick@anideaforanapp.com
+wordpress_id: 222
+wordpress_url: http://mycodelife.com/?p=222
+date: '2017-10-09 12:27:06 +1100'
+date_gmt: '2017-10-09 12:27:06 +1100'
+categories:
+- git
+- angular
+- git repository
+- batch file
+tags: []
+comments: []
+---
+<h4> Git repo: <a target="_blank" href="https://github.com/naguibihab/useful-batch-files">https://github.com/naguibihab/useful-batch-files</a></h4>
+<h1>useful-batch-files</h1>
+<p>A bunch of useful batch files for everyday development jobs. Especially useful for: - Angular Development: - Bower install - Grunt build - Copy dist folder after build - Common AWS tasks - Upload to S3 - Invalidate CloudFront - Stop &amp; Start RDS - General - Copy folder &amp; append to its name - Open git at a particular location</p>
+<p>You can run any of these batch files manually and enter the inputs as they come up or by calling the batch file in cmd and passing the inputs as parameters, i.e. <code>D:\Dev\useful-batch-files\angular\CheckoutBuild.bat master</code></p>
+<h5>IMPORTANT PREREQUSITE:</h5>
+<p>You must setup an environment variable by the name <strong>BATCHLOCATION</strong> pointing to the directory that contains these batch files</p>
+<p>Feel free to fork and contribute to that repo</p>
+<h3>To create a new batch file use this template:</h3>
+<pre>
+REM ******************************************************************************** REM FileNameHere.bat REM Explain the batch file here REM REM prerequisits: Any prerequisits type them here REM ********************************************************************************
+
+::setup if "%isSetupCalled%" equ "" ( call %BATCHLOCATION%/SetupEnv.bat ) set \_human\_or_batch=%1 set _isPause=%isPause%
+
+::inputs if "%\_human\_or_batch%" equ "" ( :: REPLACE ME set /P \_local\_variables_must_start_with_underscore=question to user:
+
+goto defaults ) :: else, get the inputs from the parameters :: REPLACE ME set \_local\_variables_must_start_with_underscore=%1 set _isPause=false
+
+::defaults :defaults :: REPLACE ME if "%\_local\_variables_must_start_with_underscore%" equ "" ( :: REPLACE ME set \_local\_variables_must_start_with_underscore=defaultValue :: REPLACE ME )
+
+::operations :: REPLACE ME Your code here
+
+if %_isPause% equ true pause 
+</pre>
+<h3>If your batch file doesn't require any inputs then use this smaller version</h3>
+<pre>
+REM ******************************************************************************** REM FileNameHere.bat REM Explain the batch file here REM REM prerequisits: Any prerequisits type them here REM ********************************************************************************
+
+::setup if "%isSetupCalled%" equ "" ( call %BATCHLOCATION%/SetupEnv.bat ) set _isPause=%isPause%
+
+::operations :: REPLACE ME Your code here
+
+if %_isPause% equ true pause 
+</pre>

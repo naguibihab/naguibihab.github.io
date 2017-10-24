@@ -1,0 +1,168 @@
+---
+layout: post
+status: publish
+published: true
+title: 3 Dev hacks for Angular developers to make your work life easier
+author:
+  display_name: Naguib Ihab
+  login: naguibihab
+  email: nick@anideaforanapp.com
+  url: ''
+author_login: naguibihab
+author_email: nick@anideaforanapp.com
+excerpt: "“A lazy developer is a good developer” — wise man"
+wordpress_id: 34
+wordpress_url: http://mycodelife.com/index.php/2017/09/28/3-dev-hacks-for-angular-developers-to-make-your-work-life-easier/
+date: '2017-09-28 04:25:25 +1000'
+date_gmt: '2017-09-28 04:25:25 +1000'
+categories:
+- Techy
+- git
+- angular
+tags: []
+comments: []
+---
+<article class="h-entry">
+<section class="e-content" data-field="body">
+<section class="section section--body section--first">
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<p id="6376" class="graf graf--p graf--startsWithDoubleQuote graf-after--h3">“A lazy developer is a good developer” — wise man</p>
+<p id="3b72" class="graf graf--p graf--hasDropCapModel graf--hasDropCap graf-after--p"><span class="graf-dropCap">D</span>on’t you just love it when the computer is smart enough to do the mundane stuff for you? If you’re a fan of <strong class="markup--strong markup--p-strong">automation </strong>and you’re working on a <strong class="markup--strong markup--p-strong">windows </strong>computer, then this article is <strong class="markup--strong markup--p-strong">for you.</strong></p>
+<h3 id="430f" class="graf graf--h3 graf-after--p">Hack #1 Batch files</h3>
+<figure id="a589" class="graf graf--figure graf-after--h3">
+<div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 360px;">
+<div class="aspectRatioPlaceholder-fill" style="padding-bottom: 51.5%;"><img class="graf-image alignleft" src="https://cdn-images-1.medium.com/max/800/1*66ZwFIPveE-lqZtpqQZqAQ.gif" data-image-id="1*66ZwFIPveE-lqZtpqQZqAQ.gif" data-width="981" data-height="505" /></div>
+</div>
+</figure>
+<p id="adb8" class="graf graf--p graf-after--figure">A simple click and your code is being built, copied, deployed, invalidated for you. Batch files are fantastic for writing quick and straightforward code that would run git/grunt/aws commands for you.</p>
+<p id="6fe2" class="graf graf--p graf-after--p"><a class="markup--anchor markup--p-anchor" href="https://github.com/naguibihab/useful-batch-files" target="_blank" rel="noopener" data-href="https://github.com/naguibihab/useful-batch-files"><strong class="markup--strong markup--p-strong">Checkout this useful git repository</strong></a><strong class="markup--strong markup--p-strong"> that contains all the batch files that I use on a daily basis for my Angular &amp; PHP development</strong></p>
+<p id="53ac" class="graf graf--p graf-after--p">Here’s an example of one of my favourite and most used batch files where it pulls a branch that I specify, does a bower install, builds it, then copies it into a location where my peers can see it and opens a browser tab pointing to that location:</p>
+<pre id="8b77" class="graf graf--pre graf-after--p">REM ****************************************************************
+REM I use that bat file when someone asks me to build them a particular branch
+REM it goes to the secondary source code (in case i'm in the middle of something
+REM and don't want to commit or stash) fetches from git, checksout the branch
+REM pulls it by force (it will overwrite any uncommitted changes but that folder
+REM shouldn't be used to write code anyway) installs any new dependencies from
+REM bower and then builds and copies that build to my xampp folder where I
+REM have a local ip address pointing to it so others on the same network can see
+REM it and test it. Eventually it opens a new browser tab with that url.
+REM
+REM If you're working remotely and want to upload the code to a server checkout
+REM the batch file "CheckoutBuildUpload" which uploads to S3
+REM
+REM prerequisits: git, bower, grunt
+REM **************************************************************</pre>
+<pre id="ea1d" class="graf graf--pre graf-after--pre">::setup
+if "%isSetupCalled%" equ "" (
+call ../SetupEnv.bat
+)
+set _human_or_batch=%1
+set _isPause=%isPause%</pre>
+<pre id="1593" class="graf graf--pre graf-after--pre">::inputs
+:: check if its called by human or by another batch file
+if "%_human_or_batch%" equ "" (
+set /P _branch_name=Branch: 
+goto defaults
+)
+:: else, get the inputs from the parameters
+set _branch_name=%1
+set _isPause=false</pre>
+<pre id="2202" class="graf graf--pre graf-after--pre">::defaults
+:defaults
+:: No defaults in that file, but I'm keeping that for consistency</pre>
+<pre id="747b" class="graf graf--pre graf-after--pre">::operations
+echo moving to %frontend_directory%:%frontend_secondary_source_code%
+%frontend_directory%:
+cd %frontend_secondary_source_code%</pre>
+<pre id="268e" class="graf graf--pre graf-after--pre">echo getting branch %_branch_name%
+call git fetch --all
+call git checkout %_branch_name% --force
+call git pull --force</pre>
+<pre id="7047" class="graf graf--pre graf-after--pre">echo building...
+call bower install
+call grunt build</pre>
+<pre id="ea3e" class="graf graf--pre graf-after--pre">xcopy "%build_file%" "%base_destination%\%_branch_name%" /s/e/c/y/f</pre>
+<pre id="1042" class="graf graf--pre graf-after--pre">start "" %base_url%/%_branch_name%</pre>
+<pre class="graf graf--pre graf-after--pre graf--trailing">if %_isPause% equ true pause</pre>
+<hr class="section-divider" />
+</div>
+</div>
+</section>
+<section class="section section--body">
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h3 id="1b84" class="graf graf--h3 graf--leading">Hack #2 Automatically starting up your apps</h3>
+<p id="94a2" class="graf graf--p graf-after--h3">I used to have my computer sleep everyday instead of shutting it down because I have more than ten applications open and I just don’t want to have to open them all up again the next day, that’s not so good for the computer though and it ends up slowing it down. The solution, using windows’ <em class="markup--em markup--p-em">Startup Menu.</em></p>
+<ul class="postList">
+<li id="2fe9" class="graf graf--li graf-after--p"><em class="markup--em markup--li-em">Open the cmd and run </em><code class="markup--code markup--li-code"><em class="markup--em markup--li-em">shell:startup</em></code></li>
+<li id="81f3" class="graf graf--li graf-after--li">Create a shortcut for each application you’re using or any batch files that you use often (i.e. to open git for my projects) and throw it in there</li>
+<li id="6fa0" class="graf graf--li graf-after--li">You can even add in batch files for stuff like:<br />
+- opening and pulling the latest from git in all projects<br />
+- running grunt-serve for your frontend application<br />
+- compiling/building your application</li>
+</ul>
+<figure id="fdd5" class="graf graf--figure graf-after--li graf--trailing">
+<div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 212px;">
+<div class="aspectRatioPlaceholder-fill" style="padding-bottom: 30.3%;"><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*kgpItEzCh51QUk5SKLvkdA.png" data-image-id="1*kgpItEzCh51QUk5SKLvkdA.png" data-width="889" data-height="269" /></div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section class="section section--body">
+<div class="section-divider">
+<hr class="section-divider" />
+</div>
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h3 id="7458" class="graf graf--h3 graf--leading">Hack #3 Git hooks</h3>
+<p id="b4a9" class="graf graf--p graf-after--h3">Git can have hooks attached to it that would do a job before or after you commit or push.<br />
+The one that I use the most is a hook that appends my branch name to the my commit message.</p>
+<p id="c38c" class="graf graf--p graf-after--p">For example if I commit a new change while on branch <code class="markup--code markup--p-code">nick-testing</code></p>
+<figure id="d1df" class="graf graf--figure graf-after--p">
+<div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 195px;">
+<div class="aspectRatioPlaceholder-fill" style="padding-bottom: 27.800000000000004%;"><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*HlNNoz2gJie_f3LfybpVcA.png" data-image-id="1*HlNNoz2gJie_f3LfybpVcA.png" data-width="741" data-height="206" /></div>
+</div>
+<figcaption class="imageCaption">git hook</figcaption>
+</figure>
+<p id="ed39" class="graf graf--p graf-after--figure">That git hook appends my branch name to that start of my commit message</p>
+<figure id="9a22" class="graf graf--figure graf-after--p">
+<div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 145px;">
+<div class="aspectRatioPlaceholder-fill" style="padding-bottom: 20.7%;"><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*8y2myBwXlAFfTrfrE_p8xQ.png" data-image-id="1*8y2myBwXlAFfTrfrE_p8xQ.png" data-width="740" data-height="153" /></div>
+</div>
+<figcaption class="imageCaption">git hook</figcaption>
+</figure>
+<p id="490a" class="graf graf--p graf--hasDropCapModel graf--hasDropCap graf-after--figure"><span class="graf-dropCap">T</span>his comes in handy when you’re working with <a class="markup--anchor markup--p-anchor" href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener" data-href="https://www.atlassian.com/software/jira">Jira</a> where commits that contain the jira task id are seen on the console</p>
+<figure id="fb00" class="graf graf--figure graf-after--p">
+<div class="aspectRatioPlaceholder is-locked" style="max-width: 465px; max-height: 270px;">
+<div class="aspectRatioPlaceholder-fill" style="padding-bottom: 58.099999999999994%;"><img class="graf-image" src="https://cdn-images-1.medium.com/max/800/1*f-Ya8OpuY8z2bPvTGYWK4A.png" data-image-id="1*f-Ya8OpuY8z2bPvTGYWK4A.png" data-width="465" data-height="270" data-is-featured="true" /></div>
+</div>
+</figure>
+<p id="0b5b" class="graf graf--p graf-after--figure">Here’s how you can add that nice little handy hook to your git repositories:</p>
+<ul class="postList">
+<li id="02f7" class="graf graf--li graf-after--p">Navigate to the hooks folder <code class="markup--code markup--li-code">/.git/hooks</code> in your repository</li>
+<li id="6bce" class="graf graf--li graf-after--li">Copy this code in a new file:</li>
+</ul>
+<pre id="c8c7" class="graf graf--pre graf-after--li">#!/bin/sh
+#
+# Automatically adds branch name and branch description to every commit message.
+#
+NAME=$(git branch | grep '*' | sed 's/* //') 
+DESCRIPTION=$(git config branch."$NAME".description)</pre>
+<pre id="7391" class="graf graf--pre graf-after--pre">echo "YourProject-$NAME"': '$(cat "$1") &gt; "$1"
+if [ -n "$DESCRIPTION" ] 
+then
+   echo "" &gt;&gt; "$1"
+   echo $DESCRIPTION &gt;&gt; "$1"
+fi</pre>
+<ul class="postList">
+<li id="d32e" class="graf graf--li graf-after--pre">Change the <code class="markup--code markup--li-code">YourProject-</code> part to your jira project name or completely remove it if you’re not using jira</li>
+<li id="3093" class="graf graf--li graf-after--li">Save that file as <code class="markup--code markup--li-code">prepare-commit-msg</code></li>
+</ul>
+<p id="b174" class="graf graf--p graf-after--li graf--trailing">Now any new commit made will contain the branch name.</p>
+</div>
+</div>
+</section>
+</section>
+</article>

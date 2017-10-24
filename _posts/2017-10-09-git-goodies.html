@@ -1,0 +1,85 @@
+---
+layout: post
+status: publish
+published: true
+title: Git Goodies
+author:
+  display_name: Naguib Ihab
+  login: naguibihab
+  email: nick@anideaforanapp.com
+  url: ''
+author_login: naguibihab
+author_email: nick@anideaforanapp.com
+wordpress_id: 235
+wordpress_url: http://mycodelife.com/?p=235
+date: '2017-10-09 12:32:54 +1100'
+date_gmt: '2017-10-09 12:32:54 +1100'
+categories:
+- git
+- git repository
+tags: []
+comments: []
+---
+<h4>Git repo: <a target="_blank" href="https://github.com/naguibihab/git-goodies">https://github.com/naguibihab/git-goodies</a></h4>
+<h1>Git Goodies</h1>
+<p>A collection of the most used git commands</p>
+<h1>Basic</h1>
+<h2>Branching</h2>
+<h5>See all local branches</h5>
+<p><code>git branch</code></p>
+<h5>See all local &amp; remote branches</h5>
+<p><code>git branch --all</code></p>
+<h5>Checkout existing branch</h5>
+<p><code>git checkout &lt;branchname&gt;</code></p>
+<h5>Force checkout</h5>
+<p><code>git checkout --force</code> <strong>warning</strong> this may overwrite some uncommitted changes</p>
+<h5>Create a new branch out of the one you're on right now</h5>
+<p><code>git checkout -b &lt;newbranch&gt;</code></p>
+<h5>Pull &amp; update local branch</h5>
+<p><code>git pull</code></p>
+<h5>Fetch changes (Note: this doesn't pull or update local branches)</h5>
+<p><code>git fetch --all</code></p>
+<h2>Making changes</h2>
+<h5>View current branch, staged, local commits..etc</h5>
+<p><code>git status</code></p>
+<h5>See the differences introduced in the staged files (before staging)</h5>
+<p><code>git diff</code></p>
+<h5>Stage changes</h5>
+<p><code>git add --all</code> or <code>git add .</code></p>
+<h5>Unstage changes</h5>
+<p><code>git reset</code></p>
+<h5>Commit changes</h5>
+<p><code>git commit -m "my commit message"</code></p>
+<h5>Stage and commit</h5>
+<p><code>got commit -a -m "my commit message"</code></p>
+<h5>See previous commits</h5>
+<p><code>git log</code></p>
+<h5>See last commit</h5>
+<p><code>git log -1</code></p>
+<h5>Push changes</h5>
+<p><code>git push</code></p>
+<h5>Push and set upstream</h5>
+<p><code>git push --set-upstream origin &lt;branchname&gt;</code></p>
+<h2>Merging</h2>
+<h5>Merging two branches</h5>
+<p><code>git merge &lt;branchname&gt;</code></p>
+<h2>Undoing</h2>
+<h5>Reverting a commit</h5>
+<p><code>git revert &lt;commitid&gt;</code></p>
+<h5>Reverting a merge to original parent</h5>
+<p><code>git revert &lt;commitid&gt; -m 1</code></p>
+<h5>Reverting a change in a particular file</h5>
+<p><code>git checkout path/to/file</code></p>
+<h5>Reset uncommitted changes</h5>
+<p><code>git reset --hard</code> <strong>warning</strong> this will remove all tracked but uncommitted changes</p>
+<h5>Resolving conflicts</h5>
+<p><code>git mergetool</code> <strong>prerequesit</strong> having a merge tool installed &amp; setup with git, check <a href="https://www.linkedin.com/pulse/git-bash-tips-tricks-naguib-ihab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_post_details%3BH1ylzOTFQ5ex6cw1yhOwTg%3D%3D">this article</a> for setting up kdfif3</p>
+<h1>Customisations</h1>
+<h2>A better looking git log</h2>
+<p><img src="https://raw.githubusercontent.com/naguibihab/git-cheat-sheet/master/assets/git-lg.png" alt="git-lg" /></p>
+<p><code>git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</code></p>
+<p>Then type <code>git lg</code> to get the log</p>
+<p><a href="https://coderwall.com/p/euwpig/a-better-git-log">Credits</a></p>
+<h2>A nice GUI for git on node.js</h2>
+<p><img src="https://raw.githubusercontent.com/naguibihab/git-cheat-sheet/master/assets/ungit.png" alt="git-lg" /></p>
+<p>For installation and usage check <a href="https://github.com/FredrikNoren/ungit">ungit's git repo</a></p>
