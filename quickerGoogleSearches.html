@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<form action="https://www.googleapis.com/customsearch/v1" method="get" id="myform">
+	    Band Name: <input id="bandName" name="bandName" type="text" value="Takh Band">
+	    <input type="submit">
+
+	    <p id="response"></p>
+	</form>
+	<script>
+	  	var form = document.getElementById('myform');
+	  	form.onsubmit = function (e) {
+		    // stop the regular form submission
+		    e.preventDefault();
+
+			var responseHtml = document.getElementById('response');
+		    
+		    var appendToQueryArray = [
+		    	'facebook',
+		    	'twitter',
+		    	'instagram'
+		    ];
+
+		    var data = {};
+		    data.key = 'AIzaSyA1TxJ6jjZx3yNQ-xZowCc2LHs_rwpzN8w';
+		    data.cx = '018300509545377698716:ezyngsa2ljy';
+
+		    var bandName = document.getElementById('bandName').value;
+
+		    var responses = [];
+
+		    appendToQueryArray.forEach(function(value){
+		    	data.q = bandName+value;
+			   	var getQuery = 'https://www.googleapis.com/customsearch/v1'
+			   		+'?key='+data.key
+			   		+'&cx='+data.cx
+			   		+'&q='+bandName+' '+value;
+
+			   	var response = JSON.parse(httpGet(getQuery));
+			   	console.log(response);
+			   	responseHtml.innerHTML+=response.items[0].link+'<br>';
+		    });
+	  	};
+
+		function httpGet(theUrl)
+		{
+		    var xmlHttp = new XMLHttpRequest();
+		    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+		    xmlHttp.send( null );
+		    return xmlHttp.responseText;
+		}
+	</script>
+</html>
