@@ -1,0 +1,111 @@
+<p>If you’re using AWS to host your applications then you’d probably be treading carefully when it comes to the RDS instances. AWS has introduced this nice new feature that allows you to stop an RDS instance which essentially deletes it and keeps a snapshot and just deploys that snapshot again when you want to start it, but it makes life a lot easier especially if you put that kind of function in a batch file and just run that file whenever you need to.</p>
+
+<p>In this article I’ll show you how to stop your RDS instances automatically every night and start them up again in the morning using AWS CLI.</p>
+
+<p><strong>Prerequisite: You have to have already setup your AWS CLI with your account and are able to run AWS commands, follow <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html">this link</a> to set it up</strong></p>
+
+
+
+<h1 id="running-it-from-windows">Running it from Windows</h1>
+
+
+
+<h2 id="step-1-update-your-cli">Step #1 Update your CLI</h2>
+
+<p>Update your CLI to the latest version by running <code>pip install --upgrade awscli</code> to upgrade or just <a href="http://docs.aws.amazon.com/cli/latest/userguide/awscli-install-windows.html">download and install the latest version</a></p>
+
+<p>Now when you type in <code>aws --version</code> in your terminal you should see something like this:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs tex">C:<span class="hljs-command">\Users</span><span class="hljs-command">\nick</span>&gt;aws --version
+aws-cli/1.11.109 Python/3.4.3 Windows/8 botocore/1.5.72</code></pre>
+
+<p>As I’m writing this on the 22nd of June 2017, the latest version for windows is 1.11.109</p>
+
+
+
+<h2 id="step-2-writing-the-script">Step #2 Writing the script</h2>
+
+<p>Create a new batch file <em>.bat</em> and write the following script</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs ruby"><span class="hljs-variable">@echo</span> off
+set rdslist=rds-instance-<span class="hljs-number">1</span> rds-instance-<span class="hljs-number">2</span>
+
+<span class="hljs-symbol">:retryaction</span>
+set /<span class="hljs-constant">P</span> action=<span class="hljs-constant">Would</span> you like to (<span class="hljs-number">1</span>)start <span class="hljs-keyword">or</span> (<span class="hljs-number">2</span>)stop these instances %rdslist%<span class="hljs-symbol">:</span>
+
+<span class="hljs-constant">IF</span> %action%==<span class="hljs-number">1</span> (
+    set command=start
+    goto <span class="hljs-symbol">:start</span>
+)
+<span class="hljs-constant">IF</span> %action%==<span class="hljs-number">2</span> (
+    set command=stop
+    goto <span class="hljs-symbol">:start</span>
+)
+
+goto <span class="hljs-symbol">:retryaction</span>
+
+<span class="hljs-symbol">:start</span>
+(<span class="hljs-keyword">for</span> <span class="hljs-string">%%a in (%</span>rdslist%) <span class="hljs-keyword">do</span> (
+    call aws rds %command<span class="hljs-string">%-db-</span>instance --db-instance-identifier <span class="hljs-string">%%a
+))
+pause</span></code></pre>
+
+<p>And replace the <code>rds-instance</code> &amp; <code>rds-instance-2</code> with your own instances names.</p>
+
+<p>What we’re doing here is that we’re creating a list of our RDS instances and then iterating over each one and either stopping or starting them. What you should see when you run this script is the following: <br>
+<code>Would you like to (1)start or (2)stop these instances rds-instance-1 rds-instance-2:</code> <br>
+once you choose the action you want to take the batch file will run the <code>start-db-instance</code> or <code>stop-db-instance</code> command on each of your RDS instances.</p>
+
+<p>You need to maintain that file and add,edit or delete RDS instances in that line 2.</p>
+
+
+
+<h3 id="at-this-stage-youre-able-to-run-that-batch-file-and-start-or-stop-rds-instances-at-anytime">At this stage you’re able to  run that batch file and start or stop RDS instances at anytime.</h3>
+
+
+
+<h2 id="step-3-automating-the-script">Step #3 Automating the script</h2>
+
+<p>If you want to schedule it from your PC or windows server you can use the Task Scheduler</p>
+
+
+
+<img src="img/blog/task-scheduler-1.png"><br>
+
+<p>Once you open it click on <em>Create a Basic Task</em> and give it the name “Start RDS”. Continue with the wizard and select the trigger that you’re after, for example you may want the RDS instances to start when you start the computer, when you login or automatically at a particular time every day. <br>
+Keep going until you get to this screen</p>
+
+
+
+<img src="img/blog/task-scheduler-2.png"><br>
+
+<p>Add in the path to your batch file and the argument <code>1</code></p>
+
+
+
+<img src="img/blog/task-scheduler-3.png"><br>
+
+<p>Continue through the wizard and finish the task. <br>
+Now we need to add a small modification to our script to have it accept parameters instead of prompting a question:</p>
+
+
+
+<pre class="prettyprint"><code class=" hljs ruby"><span class="hljs-variable">@echo</span> off
+set rdslist=rds-instance-<span class="hljs-number">1</span> rds-instance-<span class="hljs-number">2</span>
+
+<span class="hljs-constant">IF</span> %<span class="hljs-number">1</span>==<span class="hljs-number">1</span> (
+    set command=start
+)
+<span class="hljs-constant">IF</span> %<span class="hljs-number">1</span>==<span class="hljs-number">2</span> (
+    set command=stop
+)
+(<span class="hljs-keyword">for</span> <span class="hljs-string">%%a in (%</span>rdslist%) <span class="hljs-keyword">do</span> (
+    aws rds %command<span class="hljs-string">%-db-</span>instance --db-instance-identifier <span class="hljs-string">%%a
+))</span></code></pre>
+
+<p>That's it! You now have two bash files, one that you can run manually to shut down and start instances whenever you need them and one that can run on a scheduled time or trigger</p>
+<p>Watch this space and I’ll publish how to do that using Linux pretty soon ;)</p>

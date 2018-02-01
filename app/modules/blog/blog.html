@@ -1,0 +1,118 @@
+<div class="container mt-35">
+
+	<div class="row">
+		<!-- Hide Twitter div in sm -->
+		<div class="col-md-4 hidden-sm hidden-xs">
+			<div class="row">
+				<div class="col-md-12 center">
+					<h2> <strong>Social</strong> Activities</h2>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-12">
+					<a href="https://twitter.com/anideaforanpp" data-size="large" class="twitter-follow-button" data-show-count="false">Follow us on Twitter@anideaforanpp</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				<div class="col-md-12" style="max-height: {{pageHeight ? pageHeight : 400}}px;overflow-y: scroll;">
+					<a class="twitter-timeline" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/anideaforanpp">Tweets by anideaforanpp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</div>	
+			<div class="col-md-8">
+				&nbsp;
+			</div>
+
+		</div>
+		<!-- Blog div -->
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-12 center">
+					<h2> <strong>Blog</strong> Posts</h2>
+				</div>
+			</div>
+			<div style="margin-bottom: 10px;" class="dropdown jplist-items-per-page" data-control-type="boot-items-per-page-dropdown" data-control-name="paging" data-control-action="paging">
+
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown-menu-1" aria-expanded="false">					
+					<span data-type="selected-text">{{pageSize}} per page</span>
+					<span class="caret"></span>						
+				</button>
+				{{blogs.length}} total
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu-1">
+
+					<li role="presentation">
+						<a id="per-page3" role="menuitem" tabindex="-1" href="javascript:void(0);" data-number="3" data-jplist-selected="false" ng-click="changePerPage(3)">3 per page</a>
+					</li>
+
+					<li role="presentation">
+						<a id="per-page5" role="menuitem" tabindex="-1" href="javascript:void(0);" data-number="5"  data-jplist-selected="false" ng-click="changePerPage(5)">5 per page</a>
+					</li>
+							
+					<li role="presentation">
+						<a id="per-page10" role="menuitem" tabindex="-1" href="javascript:void(0);" data-number="10" data-jplist-selected="false" ng-click="changePerPage(10)">10 per page</a>
+					</li>
+
+					<li role="presentation" class="divider"></li>
+
+				</ul>						  
+			</div>
+			<div class="blog-posts">
+				
+			    
+				<div ng-repeat="blog in blogs | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize">
+					
+					<article class="post post-large">
+						<div class="post-date">
+							<span class="day">{{blog.date.day}}</span>
+							<span class="month">{{blog.date.month}} - {{blog.date.year}}</span>
+						</div>
+
+						<div class="post-content">
+							<h2>
+								<a href="#!/blog/article/{{blog.page}}">{{blog.title}} </a>
+							</h2>
+							<p><span ng-bind-html="blog.teaser | trustfilter"></span><a href="#!/blog/article#{{blog.page}}">[...]</a></p>
+						</div>
+						<i ng-if="blog.type=='audio'" class="fa fa-volume-up fa-1 pull-left" aria-hidden="true" style="color: #ee3d43;" title="Audio"></i>
+						<i ng-if="blog.type=='article'" class="fa fa-newspaper-o" aria-hidden="true" style="color: #ee3d43;" title="Article"></i>
+						<i ng-if="blog.type=='video'" class="fa fa-video-camera fa-1 pull-left" aria-hidden="true" style="color: #ee3d43;" title="Video"></i>
+
+						<a href="#!/blog/article/{{blog.page}}" class="btn btn-xs btn-primary pull-right">Read more</a><br/>
+					</article>
+				</div>
+				
+				<h3 class="text-center" ng-if="(blogs.length <= pageSize) && (currentPage > 0)">Go to previous page! </h3>
+				<ul class="pagination">
+				  	
+				  	<li><a href="javascript:void(0);" ng-class="{'disabled': currentPage <= 0}" ng-click="currentPage=currentPage-1" class="disable">PREV</a></li>
+					<li class="active"><a href="javascript:void(0);">{{currentPage+1}}/{{numberOfPages()}}</a></li>
+					<li><a href="javascript:void(0);" ng-class="{'disabled': currentPage >= getData().length/pageSize - 1}" ng-click="currentPage=currentPage+1">NEXT</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- Show Twitter div in sm -->
+		<div class="col-md-4 visible-sm visible-xs">
+			<div class="row">
+				<div class="col-md-12 center">
+					<h2> <strong>Social</strong> Activities</h2>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-12">
+					<a href="https://twitter.com/anideaforanpp" data-size="large" class="twitter-follow-button" data-show-count="false">Follow us on Twitter@anideaforanpp</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				<div class="col-md-12" style="max-height: {{pageHeight ? pageHeight : '400px'}}px;overflow-y: scroll;">
+					<a class="twitter-timeline" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/anideaforanpp">Tweets by anideaforanpp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+			</div>	
+			<div class="col-md-8">
+				&nbsp;
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- <twitter-timeline>
+    <a class="twitter-timeline" href="https://twitter.com/IAmAru/lists/food-trucks" data-widget-id="673710543212052480"> Tweets from https://twitter.com/IAmAru/lists/food-trucks</a>
+</twitter-timeline>

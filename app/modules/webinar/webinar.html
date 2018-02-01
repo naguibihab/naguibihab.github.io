@@ -1,0 +1,110 @@
+
+<div class="container" ng-show="showTimer">
+	<h2 class="webinar-title text-center">Next Webinar</h2>
+	<div id="countdown">
+		<div class="time-component">
+		  <span>{{ CountDown.days }}</span>
+		  <div class="label">&nbsp;&nbsp;Days</div>
+		</div>
+		<div class="time-component">
+		  <span>{{ CountDown.hours }}</span>
+		  <div class="label">Hours</div>
+		</div>
+		<div class="time-component">
+		  <span>{{ CountDown.minutes }}</span>
+		  <div class="label">Minutes</div>
+		</div>
+		<div class="time-component">
+		  <span>{{ CountDown.seconds }}</span>
+		  <div class="label">Seconds</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="formModalLabel">Signup for our <span class="alternative-font">very first</span> webinar held on <b>7pm Wednesday</b> the <b>14</b><sup>th</sup> of June AEST</h4>
+			</div>
+			<div class="modal-body">
+				<form ng-submit="submitContactForm()" >
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-6">
+								<label>Your name *</label>
+								<input type="text" value="" ng-model="contactName" maxlength="100" class="form-control" required>
+							</div>
+							<div class="col-md-6">
+								<label>Your email address *</label>
+								<input type="email" value="" ng-model="contactEmail" maxlength="100" class="form-control" name="email" required>
+							</div>
+						</div>
+					</div>
+					<h4>We don't spam or subscribe you to newsletters</h4><span>You'll get <strong><u>three</u></strong> emails from us</span>
+					<ul>
+						<li>One for confirming your sign up</li>
+						<li>One for reminding you about the webinar (before it starts)</li>
+						<li>One after the webinar (with a recorded video)</li>
+					</ul>
+					<div class="row">
+						<div class="col-md-12">
+							<input type="submit" value="{{contactButton}}" class="btn btn-primary btn-lg mb-xlg">
+							<div ng-if="contactAlert.message" class="alert" ng-class="contactAlert.class" ng-bind-html="contactAlert.message">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" ng-show="showWebinar">
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<h1 class="heading-primary mt-xlg">Sign up for our <span class="alternative-font">very first!</span> webinar held on <b>7pm Wednesday</b> the <b>14</b><sup>th</sup> of June AEST
+
+			<h4 class="heading-primary mt-lg">We'll be doing a webinar live on <a href="https://www.facebook.com/anideaforanapp/" target="_blank"><u>Facebook</u></a> and <a href="https://www.instagram.com/anideaforanapp/" target="_blank"><u>Instagram</u></a> where we talk about developing apps:</h4>
+			<ul>
+				<li>How much do they  <strong>cost</strong> </li>
+				<li>What is the <strong>process/stages</strong> of developing an app </li>
+				<li>Most common <strong>problems</strong> that faces apps in startups </li>
+				<li>General <strong>Q&A</strong> </li>
+			</ul>
+
+			<div class="text-center visible-xs">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+					Sign up for our June webinar
+				</button>
+			</div>
+
+			<div class="text-right hidden-xs col-md-3 col-md-offset-4">
+				<button class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+					Sign up for our June webinar
+				</button>
+			</div>
+			
+			<div class="col-md-12">
+				<hr>
+
+
+				<h4><b>Did you know that</b> <span id="contactTyped"></span></h4>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="container" ng-hide="showWebinar">
+	<h1 class="heading-primary mt-xlg text-center" style="min-height: 200px;">
+	Thanks for being a part of the webinar!
+	</h1>
+</div>
+
+

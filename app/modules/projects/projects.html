@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="col-md-12 center pb-xl">
+		<h2 class="mt-xlg pt-md mb-none">A <strong>selection</strong> of our <span class="alternative-font font-size-md">proud work</span></h2>
+		<hr>
+	</div>
+
+	<ul class="portfolio-list">
+		<!-- Item start -->
+		<li class="col-md-6 mt-xl" ng-repeat="item in portfolio">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="portfolio-item">
+						<a href="#!/projects/preview/{{item.page}}">
+							<span class="thumb-info thumb-info-no-zoom thumb-info-lighten">
+								<span class="thumb-info-wrapper">
+									<img src="img/projects/{{item.images.thumb}}" class="img-responsive" alt="">
+									<span class="thumb-info-action">
+										<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+									</span>
+								</span>
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="portfolio-info">
+						<div class="row">
+							<div class="col-md-12 center">
+								<ul>
+									<li>
+										 {{item.info}}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h2 class="heading-primary">{{item.title}}</h2>
+					<p class="mt-xlg block-limit" ng-bind-html="item.story | trustfilter"></p>
+					<a href="#!/projects/preview/{{item.page}}" class="btn btn-primary">Know more...</a>
+				</div>
+			</div>
+		</li>
+		<!-- Item end -->
+	</ul>
+
+	<div class="col-md-12 center pb-xl">
+		<hr>
+		<h2 class="mt-xlg pt-md mb-none">Want to know more about these projects?</h2>
+		<p class="lead mb-none">Each of these projects has a rich backstory that went on for months.</p>
+
+		<a class="open-demo-options btn btn-3d btn-xlg btn-primary m-xl" href="#!/contact">Let's meet up over coffee<i class="ml-md fa fa-coffee"></i></a>
+	</div>
+</div>

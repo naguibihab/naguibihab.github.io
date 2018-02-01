@@ -1,0 +1,185 @@
+<div class="modal fade" id="walkthroughModal" tabindex="-1" role="dialog" aria-labelledby="walkthroughModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<img class="img-responsive" src="img/projects/{{proj.logo}}"/>
+			</div>
+			<div class="modal-body">
+				<form ng-submit="submitContactForm()" >
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-6">
+								<label>Your name *</label>
+								<input type="text" value="" ng-model="contactName" maxlength="100" class="form-control" required>
+							</div>
+							<div class="col-md-6">
+								<label>Your email address *</label>
+								<input type="email" value="" ng-model="contactEmail" maxlength="100" class="form-control" name="email" required>
+							</div>
+							<div class="col-md-6">
+								<label>Your phone *</label>
+								<input type="number" value="" ng-model="contactNumber" maxlength="100" class="form-control" name="number" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<input type="submit" value="Walk me through {{proj.title}}" class="btn btn-primary btn-lg mb-xlg">
+							<div ng-if="contactAlert.message" class="alert" ng-class="contactAlert.class" ng-bind-html="contactAlert.message">
+							</div>
+						</div>
+					</div>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div role="main" class="main">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<img class="project-logo img-responsive col-md-offset-3" src="img/projects/{{proj.logo}}">
+					<div ng-if="proj.images.web" class="owl-carousel owl-theme show-nav-hover mt-none" data-plugin-options='{"items": 1, "margin": 10, "loop": true, "nav": true, "animateOut": "fadeOut"}'>
+						<div ng-repeat='image in proj.images.web'>
+							<span class="img-thumbnail">
+								<img src="img/projects/{{image.location}}" class="img-responsive" alt="">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="mt-lg mb-sm">{{proj.title}} : {{proj.info}}</h2>
+			<hr>
+
+			<div class="row">
+
+				<div class="col-md-8">
+					<span ng-if="proj.images.firstemail">
+						<h5 class="mb-xs heading-primary"><b> It all started with a simple request</b></h5>
+						<span class="img-thumbnail">
+							<img src="img/projects/{{proj.images.firstemail}}" class="img-responsive" alt="{{proj.title}}-anideaforanapp">
+						</span>
+						<hr>
+					</span>
+
+					<h5 class="mb-xs heading-primary"><b>About The App</b></h5>
+					<p class="mt-none mb-xlg fz-18" ng-bind-html="::proj.desc | trustfilter"></p>
+
+					<h5 class="mb-xs heading-primary"><b>The Story</b></h5>
+					<p class="mt-none mb-xlg fz-18" ng-bind-html="::proj.story | trustfilter"></p>
+
+					<div ng-if="proj.demo" class="heading heading-border">
+						<h2>See the the actual app <span class="inverted inverted-primary">in action!</span></h2>
+					</div>
+					<!-- Demo links -->
+					<a ng-if="proj.demo.web" href="{{proj.demo.web}}" class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Web</a> 
+
+					<a ng-if="proj.demo.android" href="{{proj.demo.android}}" class="btn btn-primary btn-icon" target="_blank">
+					<i class="fa fa-android"></i>Android</a>
+
+					<a ng-if="proj.demo.ios" href="{{proj.demo.ios}}" class="btn btn-primary btn-icon" target="_blank">
+					<i class="fa fa-apple"></i>IPhone</a>
+
+					<button ng-if="proj.demo.walkthrough" data-toggle="modal" data-target="#walkthroughModal" class="btn btn-primary btn-icon" target="_blank">
+					Request a Walk-through</button>
+
+
+					<span ng-if="proj.demo" class="arrow hlb appear-animation" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>
+
+					<hr>
+
+					<ul class="portfolio-details mt-none mb-xl">
+						<li>
+							<h5 class="mb-xs heading-primary"><b>The Client</b></h5>
+							<p>{{proj.client.name}}
+							<span ng-if="proj.prod"> - <a href="http://{{proj.prod}}" target="_blank">{{proj.prod}} </a><i class="fa fa-external-link"></i> 
+							</span></p>
+						</li>
+					</ul>
+
+					<div ng-if="proj.testimonial" class="testimonial testimonial-style-4">
+						<blockquote>
+							<p>{{proj.testimonial}}</p>
+						</blockquote>
+						<div class="testimonial-arrow-down"></div>
+						<div class="testimonial-author">
+							<div ng-if="proj.client.pic" class="testimonial-author-thumbnail">
+								<img alt="{{proj.title}}-anideaforanapp" class="img-responsive img-circle" src="img/clients/{{proj.client.pic}}">
+							</div>
+							<p><strong>{{proj.client.name}}</strong><span>{{proj.client.title}}</span></p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-4">
+					<div class="owl-carousel owl-theme show-nav-hover mt-none" data-plugin-options='{"items": 1, "margin": 10, "loop": true, "nav": true, "animateOut": "fadeOut"}'>
+						<div ng-repeat='image in proj.images.mobile'>
+							<span class="img-thumbnail">
+								<img src="img/projects/{{image.location}}" class="img-responsive" alt="{{proj.title}}-anideaforanapp">
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12" ng-if="proj.images.mockup">
+					<hr>
+					<h4> It took some <strong>strong</strong> planning </h4>
+					<div class="owl-carousel owl-theme show-nav-hover mt-none" data-plugin-options='{"items": 1, "margin": 10, "loop": true, "nav": true, "animateOut": "fadeOut"}'>
+						<div ng-repeat='image in proj.images.mockup'>
+							<span class="img-thumbnail">
+								<img src="img/projects/{{image.location}}" class="img-responsive" alt="{{proj.title}}-anideaforanapp">
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+<!-- Head Libs -->
+<script src="vendor/modernizr/modernizr.min.js"></script>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+<script src="vendor/common/common.min.js"></script>
+<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
+<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+<script src="vendor/isotope/jquery.isotope.min.js"></script>
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendor/vide/vide.min.js"></script>
+
+<!-- Current Page Vendor and Views -->
+<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+<script src="js/views/view.home.js"></script>
+
+<script src="vendor/typed.js/js/typed.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/theme.init.js"></script>
+
+
+
+<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-12345678-1', 'auto');
+	ga('send', 'pageview');
+</script>
+ -->

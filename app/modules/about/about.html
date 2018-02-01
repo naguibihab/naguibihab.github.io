@@ -1,0 +1,56 @@
+<div role="main" class="main aboutus_template">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 center">
+				<h2 class="mb-lg">
+					The actual team behind AnIdeaForAnApp
+				</h2>
+				<hr>
+				<span>
+					<strong>Want a challange?</strong> Record yourself pronouncing each name correctly, upload it to youtube and send us the link. The prize? A congratulational shout out on our social media pages.
+				</span>
+			</div>
+		</div>
+		<div class="row mt-xlg mb-xlg">
+
+			<div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="member in team">
+				<span class="thumb-info thumb-info-hide-wrapper-bg">
+					<span class="thumb-info-wrapper">
+						<a href="about-me.html">
+							<img src="img/team/{{member.image}}" class="img-responsive" alt="">
+							<span class="thumb-info-title">
+								<span class="thumb-info-inner">{{member.name}}</span>
+								<span class="thumb-info-type">{{member.title}}</span>
+							</span>
+						</a>
+					</span>
+					<span class="thumb-info-caption">
+						<span class="thumb-info-caption-text">{{member.bio}}</span>
+						<hr>
+						<span class="thumb-info-caption-text">{{member.email}}</span>
+					</span>
+				</span>
+			</div>
+			
+		    
+		</div>
+	</div>
+
+	<section class="call-to-action call-to-action-default with-button-arrow call-to-action-in-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="call-to-action-content">
+						<h3>Porto is <strong>everything</strong> you need to create an <strong>awesome</strong> website!</h3>
+						<p>The <strong>#1 Selling</strong> HTML Site Template on ThemeForest</p>
+					</div>
+					<div class="call-to-action-btn">
+						<a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-lg btn-primary">Buy Now!</a><span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -12px;"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>

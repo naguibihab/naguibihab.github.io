@@ -1,0 +1,131 @@
+<div class="container mt-35" ng-controller="blogPostCtrl">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="blog-posts">
+				<article class="post post-large blog-single-post">
+
+					<div ng-if="blog.image" class="img-thumbnail">
+						<img class="img-responsive" src="img/blog/{{blog.image}}" alt="">
+					</div>
+
+					<div class="post-date">
+						<span class="day">{{blog.date.day}}</span>
+						<span class="month">{{blog.date.month}} - {{blog.date.year}}</span>
+					</div>
+
+					<div class="post-content">
+
+						<h2>{{blog.title}}</h2>
+
+						<div class="post-meta">
+							<span><i class="fa fa-user"></i> By {{blog.author.name}} </span>
+							<!-- <span><i class="fa fa-tag"></i>
+								<span ng-repeat="tag in blog.tags">
+									<a href="#!/blog#{{tag.title}}">{{tag.title}}</a><span ng-if="!$last">,</span>
+								</span>
+							</span> -->
+						</div>
+
+						<div ng-include="'modules/services/blog_files/'+blog.full">
+						</div>
+
+						<!-- <div id="fb-root"></div>
+					    <script>(function(d, s, id) {
+					        var js, fjs = d.getElementsByTagName(s)[0];
+					        if (d.getElementById(id)) return;
+					        js = d.createElement(s); js.id = id;
+					        js.src = "//connect.facebook.net/en/all.js#xfbml=1&appId=643503385720456";
+					        fjs.parentNode.insertBefore(js, fjs);
+					        }(document, 'script', 'facebook-jssdk'));
+					    </script> -->
+					    
+
+						<div class="post-block">
+							<h3 class="heading-primary"><i class="fa fa-share"></i>Share this post</h3>
+							
+							<!-- <a href="javascript:void(0);" socialshare				socialshare-provider="facebook"
+							socialshare-text="{{blog.title}}"
+							socialshare-description="{{blog.title}}"
+							socialshare-hashtags="{{blog.tags[0]}}"
+							socialshare-url="{{pageUrl}}">
+								<img width="40" src="img/icons/facebook.png">
+							</a> -->
+
+							<a href="javascript:void(0);" socialshare				socialshare-provider="twitter"
+							socialshare-text="{{blog.title}}"
+							socialshare-hashtags="{{blog.tags[0]}}"
+							socialshare-url="{{pageUrl}}">
+								<img width="40" src="img/icons/twitter.png">
+							</a>
+
+							<a href="javascript:void(0);" socialshare				socialshare-provider="linkedin"
+							socialshare-text="{{blog.title}}"
+							socialshare-hashtags=""
+							socialshare-url="{{pageUrl}}">
+								<img width="40" src="img/icons/linkedin.png">
+							</a>
+
+							<a href="javascript:void(0);" socialshare				socialshare-provider="email"
+							socialshare-subject="An Idea for an App - blog"
+							socialshare-body='Hey, I just found this cool article "{{blog.title}}" check this out.'
+							socialshare-hashtags=""
+							socialshare-url="{{pageUrl}}">
+								<img width="43" src="img/icons/email.png">
+							</a>
+
+							<a href="javascript:window.print();">
+								<img width="43" src="img/icons/print.png">
+							</a>
+						</div>
+						
+						<div class="fb-comments" data-href="{{pageUrl}}" data-order-by="social" data-numposts="5" data-width="100%" style="display:block;"></div></div>
+						<!-- <div class="post-block post-share" >
+							<h3 class="heading-primary"><i class="fa fa-share"></i>Share this post</h3>
+
+							<div class="addthis_inline_share_toolbox" id="add_this_buttons"></div>
+
+
+							
+
+							 <script>
+							 	function loadAddThis() {
+							        addthis.init()
+							    }
+							    loadAddThis();
+							 </script>
+						</div> -->
+
+				</article>
+					</div>
+
+
+
+
+				<a href="#!/blog" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-arrow-left"></i> Read more blogs</a>
+
+				<a href="#!/contact" class="mb-xs mt-xs mr-xs btn btn-default">Contact us <i class="fa fa-arrow-right"></i></a>
+			</div>
+
+		</div>
+	</div>
+
+
+
+<!-- <div class="col-sm-9">&nbsp;</div> -->
+<script>
+    /*(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1680990388872105";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));*/
+
+    $(window).on('load', function(){
+    	// alert('ttest');
+	});
+
+
+</script>
+
+	

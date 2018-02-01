@@ -1,0 +1,395 @@
+/* Testimonials */
+.testimonial-row{
+  display: none;
+}
+#testimonials-row-1{
+  display: block;
+}
+#testimonial-seeall-button{
+  margin-left: 43%;
+}
+
+/* Typed css */
+#bash{
+  display: none; /* By default it's hidden, home controller shows it */
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* Bash text editor styles */
+#bash {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.text-editor-wrap {
+	width: 80%;
+  display: block;
+  margin: auto;
+  /*max-width: 530px;*/
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+  clear: both;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.title-bar {
+  padding: 5px 0;
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
+  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
+  box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
+  border-bottom: #6a6a6a 1px solid; }
+
+.text-body {
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  color: #f0f0f0;
+  text-shadow: #000 0px 1px 0px;
+  font-family: "Consolas", "Courier New", "Courier";
+  font-size: 1.75em;
+  line-height: 1.40em;
+  font-weight: 500;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+  .project-logo{
+    margin-left: 27%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  
+  p.testimonial_paragraph {
+    text-align: justify;
+    min-height: 367px;
+  }
+.main.aboutus_template.ng-scope {
+    margin-top: 35px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
+.mt-35{
+  margin-top: 35px;
+}
+.industry-img{
+  height: 200px;
+}
+.industry-title{
+  font-size: 20px;
+  font-weight: 700; 
+}
+.mt-35i{
+  margin-top: 35px !important;
+}
+
+.fz-15 {
+  font-size: 15px;
+}
+.fz-18 {
+  font-size: 18px;
+}
+.fz-20 {
+  font-size: 20px;
+}
+.fz-25 {
+  font-size: 25px;
+}
+.fz-30 {
+  font-size: 30px;
+}
+.fz-35 {
+  font-size: 35px;
+}
+
+.white-font {
+  color: white;
+}
+
+ 
+#share-buttons img {
+  width: 50px;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0;
+  display: inline;
+}
+
+.at300b{
+    margin-right: 5px;
+}
+
+/*Twitter*/
+.SandboxRoot.env-bp-970 .timeline-Tweet-text {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+}
+.timeline-TweetList-tweet{
+    float: left;
+    width: 33.33%;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.top-label{
+  font-size: 30px;
+}
+
+.top-label{
+  font-size: 28px;
+}
+
+.font-25{
+  font-size: 25px;
+}
+
+.border-trb-0{
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+}
+
+.call-to-action.featured{
+  border-top: 1px solid #CCC;
+}
+
+.call-to-action h3{
+  line-height: 30px;
+}
+/*Webinar timer*/
+.timer{
+  background-color: #ddd;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h2.webinar-title
+{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#countdown {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    width: 100%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+#countdown > div{
+    padding: 10px;
+    border-radius: 8px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#countdown div > span{
+    padding: 20px;
+    border-radius: 50%;
+    background: #00816A;
+    display: inline-block;
+}
+
+.time-component > .label{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.time-component{
+  width: 145px;
+  margin-bottom: 5px;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* Social media font awesome icons */
+  /* Style all font awesome icons */
+.fa-i {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa-i:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #3D6B92;
+    color: white;
+}
+
+.social{
+  width: 60px;
+}
+
+.webinar-text{
+  font-size: 30px;
+}
+
+.webinar-link{
+  padding: 2px 16px !important;
+}
+
+#countdown > .webinar-top{
+    padding: 7px;
+    border-radius: 8px;
+    /*background: #392D2A;*/
+    display: inline-block;
+    /*background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;*/
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), #000;
+    background-size:2px auto;
+}
+
+.webinar-top {
+    width: 120px;
+    margin-bottom: 3px;
+    font-size: 22px;
+}
+
+.webinar-text-top{
+  font-size: 16px;
+  color: #000;
+  vertical-align: middle;
+}
+
+.block-limit {
+  max-block-size: 250px;
+  overflow: hidden;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.logo-img {
+    float:left;
+}
+.logo-txt {
+    float:right;
+    font-size: 1.4em;
+    font-family: 'Open Sans';
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 920px) {
+  #bash {
+    margin-top: 30%;
+  }
+
+  .hide-on-mobile{
+    display: none !important;
+  }
+
+  .text-body {
+    height: 200px;
+  }
+
+  .project-logo {
+    width: 50%;
+  }
+
+  .webinar-text, .fa-i{
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .logo-txt {
+      font-size: 1.2em;
+  }
+}

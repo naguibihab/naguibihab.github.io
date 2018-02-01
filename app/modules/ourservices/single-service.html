@@ -1,0 +1,35 @@
+<div class="container mt-xlg" ng-if="service">
+
+
+	<div class="row">
+		<h1 class="center"><strong>{{service.title}}</strong></h1>
+		<p class="lead" ng-bind-html="service.description | trustfilter">
+		</p>
+		<div class="center">
+			<img src="img/{{service.image}}"> <br>	
+			<a href="#!/contact" class="btn btn-lg btn-primary mt-xl">{{service.calltoaction}}</a>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="featured-boxes">
+		<div class="row">
+			<div class="col-md-12 center">
+				<h2>Other <strong>Services</strong></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-6" ng-repeat="service in ourservices">
+				<div class="featured-box featured-box-primary featured-box-effect-1 mt-xlg">
+					<div class="box-content">
+						<img src="img/{{service.thumbnail}}">
+						<h4>{{service.title}}</h4>
+						<p>{{service.shortDescription}}</p>
+						<p><a href="#!/ourservices/service#{{service.page}}" class="lnk-primary learn-more">Learn More <i class="fa fa-angle-right"></i></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

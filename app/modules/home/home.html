@@ -1,0 +1,359 @@
+			<section class="parallax section section-text-light section-parallax section-center mb-none" data-plugin-parallax="" data-plugin-options="{&quot;speed&quot;: 1.5}" data-image-src="img/parallax.jpg" style="background-image: url(&quot;img/parallax.jpg&quot;); background-position: 50% 187.333px;">
+					<div class="container">
+						<div class="row">
+							<img src="img/ellf/idea.png">
+						</div>
+
+						<div class="row">
+							<h2><i class="fa fa-quote-left"></i> <strong>I have an idea but I don't know where to start?</strong> <i class="fa fa-quote-right"></i></h2>
+						</div>
+				
+						<div class="row">
+							<p class="lead">
+								We develop new apps every day and we have all the answers you're after.
+							</p>
+						</div>
+
+						<div class="row">
+							<a href="#!/contact" class="btn btn-lg btn-primary">Pick our brains, ask us anything</a>
+						</div>
+				
+					</div>
+				</section>
+
+				<!-- Our Services -->
+				<section class="section m-none">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 center">
+								<h2>Our <strong>Services</strong></h2>
+							</div>
+						</div>
+						<!-- First row -->
+						<div class="row mt-lg">
+							<div class="col-md-4 col-xs-12" ng-repeat="service in ourservices.firstrow">
+								<div class="row">
+									<div class="col-md-5">
+										<img class="img-responsive mb-lg" src="img/{{service.thumbnail}}" alt="">
+									</div>
+									<div class="col-md-7">
+										<h4 class="mb-xs">{{service.title}}</h4>
+										<p>{{service.shortDescription}}</p>
+										<p><a class="btn-flat btn-xs" href="#!/ourservices/service#{{service.page}}">Read More <i class="fa fa-arrow-right"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Second row -->
+						<div class="row mt-lg">
+							<div class="col-md-6 col-xs-12" ng-repeat="service in ourservices.secondrow">
+								<div class="row">
+									<div class="col-md-3">
+										<img class="img-responsive mb-lg" src="img/{{service.thumbnail}}" alt="">
+									</div>
+									<div class="col-md-7">
+										<h4 class="mb-xs">{{service.title}}</h4>
+										<p>{{service.shortDescription}}</p>
+										<p><a class="btn-flat btn-xs" href="#!/ourservices/service#{{service.page}}">Read More <i class="fa fa-arrow-right"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Testimonials -->
+				<div class="container mt-lg">
+					<div class="row testimonial-row" id="testimonials-row-1">
+						<div class="col-md-6">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"Nick and I started discussing him making the Android version for me back in January and from the very beginning I knew he knew his stuff and was someone I felt confident would represent my business in the best possible light. I think as small business owners when we engage another business to do something for us, them actually doing the job is only part of the overall experience- how they go about their work, their values and morals and how professional they are throughout the relationship is just as important, at least it is for me anyway. Nick ticked every single one of these boxes and it got to a stage where he was more annoyed at the thought of him missing deadlines than I was. I was continually kept updated and his attention to detail was incredible- he refused to proceed with something unless it was perfect. If you need a website or app built to an extremely high standard by an ultimate professional, then Nick is your man. Highly recommended- thanks again mate."</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Paul Metcalf</strong><span>Founder - CollectMore Android and IOS app</span></p>
+									<p> Paul's app is now in the top 50 of most downloaded apps in Australia 
+										<a href="#!/projects/preview#collectmore">Find out more about Paul's app</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"Nick from An Idea For An App is always very accommodating with our requests and actions any we throw at him with urgency.  He sends updates whenever any changes are made or updates are available to ensure we are kept in the loop and he always provides round the clock service.  We are more than happy to recommend An Idea For An App for their service and dedication to their clients."</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Peter Honey</strong><span>Founder & Manging Director - Priority Plus Plumbing</span></p>
+									<p> Peter asked us to create different web and mobile applications for his business that have saved him and his staff over a hundred hours a week. 
+										<a href="#!/projects/preview#gimble">Checkout Peter's Gimble app</a> and also 
+										<a href="#!/projects/preview#tools">Checkout Peter's Tool Tracker app</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" id="testimonial-seeall-button">
+						<button class="btn btn-borders btn-primary btn-lg" ng-click="displayAllTestimonials()">See more testimonials</button>
+					</div>
+
+					<div class="row testimonial-row" id="testimonials-row-2">
+						<div class="col-md-4">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"I approached Nick with an idea to develop a customer service survey builder and was lucky enough that he chose to help me realise its development. Nick is very open, and extremely easy to communicate with from the very beginning of the development journey. I would definitely recommend An Idea For An App to anyone looking to turn their idea into something real!"</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Philip Faraj</strong><span>Founder - Emovey</span></p>
+									<p>Phil is a law student who came to us with an amazing idea for a new survey app that uses emoticons instead of the usual boring multi choice questions. We helped Phil bring his idea to life and it's now live and free for the public <a href="#!/projects/preview#emovey"> Checkout Phil's application</a></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"Love to give a big shout out and a massive THANK YOU to Nick Ihab from An Idea For An App for helping me to add a retail store locator function to my Wordpress site. He certainly went above and beyond the small fee he charged me"</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Donna Maro</strong><span>Founder - The Australian Sweet Co</span></p>
+									<p> Donna needed a custom web application that allows people to customise their own candy and then buy them, compared to the previous manual process, Donna is now saving time and effort by giving her customers and easy to use solution 
+										<!-- <a href="australiansweetco">Checkout Donna's app</a> -->
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"I recently went to An Idea For An App on behalf of a client to get assistance in the web-development of an online invoicing system.
+									The work they did for me was done quickly and with great care. What I found most notable about An Idea For An App was that it worked with my budget, I didn't feel overcharged and had plenty of tech support and communication throughout the project.
+									I will definitely be using An Idea For An App in the future!"</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Miles Hellyer</strong><span>Founder - Chalk Marketing</span></p>
+									<p>Miles had a client who wanted a quote template creator and invoicing system for their business built in wordpress, we helped by building a prototype application for Miles then guided him in implementing it in the wordpress website, unfortunately that app is used in-house and is not available for the public 
+										<!-- <a href="plumbersscript"> but we can show you the prototype</a> -->
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row testimonial-row" id="testimonials-row-3">
+						<div class="col-md-5">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"I'm so grateful to you, honestly for the help and advice you offered on our platform. He's not only a guru in web development but he sees things from a business perspective which is what you need from partners, suppliers, etc. He offered technical advice that would be suitable from a business sense but also looked out for us and gave us value. It's so refreshing to find honest and helpful people these days. Thanks again Nick Ihab!"</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Marian Makkar</strong><span>Co-Founder - MyTribeX</span></p>
+									<p> We didn't really develop any apps for Marian, however, after some bad experience with another software solutions company she sought our help and we gave her advice and guidance on her current application and what technologies she's needs in order to achieve what she's after</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"Nick and his team were keen to help and very flexible. Nothing was too much trouble."</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Michael Clancy</strong><span>Co-Founder - Big Future</span></p>
+									<p>Big future was one of our very first applications, we were asked to build the front-end that would appeal to their users and provide good user experience
+										<!-- <a href="plumbersscript"> Checkout what we built for them </a> -->
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"An Idea For An App have worked with us in collaboration on a few projects and we keep going back to Nick and his team as they take the time to understand what we require. They also go above and beyond what is requested to provide websites that are second to none. We have complete trust in the work that is provided and think of An Idea For An App as a part of our own team."</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Melita Valicich</strong><span>Founder - Envious Solutions</span></p>
+									<p>We helped Melita with different projects for her clients such as wordpress websites and animatied banners</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-12">
+							<div class="testimonial testimonial-style-5">
+								<blockquote>
+									<p class="">"Nick is genuinely one of the most knowledgable developers out there. He has helped me and several of my clients with a range of web development and app development projects. Nick is responsive, easy to work with, highly knowledgeable and makes websites and apps that truly convert. I have been working with developers for years and no one compares to Nick."</p>
+								</blockquote>
+								<div class="testimonial-arrow-down"></div>
+								<div class="testimonial-author">
+									<p><strong>Gemma Renton</strong><span>Founder - Vine Street Digital</span></p>
+									<p> Gemma is a brilliant online marketer that has helped a lot of our clients and we have helped hers with small but peculiar issues
+										<!-- <a href="australiansweetco">Checkout Donna's app</a> -->
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Counters + Industries -->
+				<section class="parallax section section-text-light section-parallax section-center mb-none" data-plugin-parallax="" data-plugin-options="{&quot;speed&quot;: 1.5}" data-image-src="img/parallax.jpg" style="background-image: url(&quot;img/parallax.jpg&quot;); background-position: 50% 187.333px;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<h2 class="mb-xs">Industries we've worked with</strong></h2>
+								<div class="row white-font">
+									<div class="col-md-6 mt-xl" ng-repeat="industry in industries">
+										<i class="col-md-12 fa fa-{{industry.icon}} fz-30"></i>
+										<span class="col-md-12 mt-md fz-20">{{industry.title}}</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+
+								<h2 class="mb-xs">Our Stats</h2>
+
+								<div class="content-grid content-grid-dashed mt-xlg mb-lg">
+									<div class="row content-grid-row">
+										<div class="content-grid-item col-md-6 center">
+											<div class="counters">
+												<div class="counter counter-light counter-text-light">
+													<i class="fa fa-user"></i>
+													<strong data-to="20" data-append="+">0</strong>
+													<label>Happy Clients</label>
+												</div>
+											</div>	
+										</div>
+										<div class="content-grid-item col-md-6 center">
+											<div class="counters">
+												<div class="counter counter-light">
+													<i class="fa fa-clock-o"></i>
+													<strong data-to="2500" data-append="+">0</strong>
+													<label>Hours of Coding</label>
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="row content-grid-row">
+										<div class="content-grid-item col-md-6 center">
+											<div class="counters">
+												<div class="counter counter-light">
+													<i class="fa fa-cloud"></i>
+													<strong data-to="60" data-append="+">0</strong>
+													<label> Ideas to Solutions</label>
+												</div>
+											</div>	
+										</div>
+										<div class="content-grid-item col-md-6 center">
+											<div class="counters">
+												<div class="counter counter-light">
+													<i class="fa fa-cloud-upload"></i>
+													<strong data-to="40" data-append="+">0</strong>
+													<label>Second Versions</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="col-md-12 text-center white-font">
+								<h2 class="mt-lg">We work with all sizes, from <span class="fz-25">small mini</span> apps to <span class="fz-35">large SaaS</span> applications</h2>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- FAQ -->
+				<div class="container mt-lg">
+
+					<h4><i class="fa fa-question-circle-o"></i> How much does it cost to make an app</h4>
+					<p>Our prices start at $2000 for a proof of concept app, however, there are a lot of factors that go into pricing an app, the best way to know how much your app would cost is by <a href="#!/contact">contacting us</a> directly and get an accurate estimate.</p>
+
+					<h4><i class="fa fa-question-circle-o"></i> What is the process of making an app with you guys</h4>
+					<ul>
+						<li> Step 1 is having a chat over the phone to understand what you're after.</li>
+						<li> Step 2 is creating specs document or a basic mockup that summarises the application and what it does and how it does it</li>
+						<li> Step 3 is making an estimate of how much the app would cost and how long would it take to build. That estimate defines approximately how much the app would cost but does not provide an exact number</li>
+						<li> Step 4 is providing a detailed mockup with the design that covers the all of the application's functionality and clearly explains what the end result would look like. We take a downpayment between $200 - $500 to cover the cost of this design.</li>
+						<li> Step 5 is creating an accurate quotation that covers the exact cost (that would be around the estimate of step 3) and providing a delivery plan with dates </li>
+						<li> Step 6 is developing the application</li> 
+					</ul>
+					<p>
+						After the app is finished, we provide ongoing support and answer any questions you have about the application. If your application needs web hosting we provide a managed Amazon Web Serviecs hosting that covers all of your server needs.
+					</p>
+				</div>
+
+				<hr>
+				<!-- Showing off  | Portfolio-->
+
+				<section class="parallax section section-text-light section-parallax section-center" data-plugin-parallax="" data-plugin-options="{&quot;speed&quot;: 1.5}" data-image-src="img/parallax.jpg" style="background-image: url(&quot;img/parallax.jpg&quot;); background-position: 50% 187.333px;">
+					<div class="container">
+						<div class="featured-boxes featured-boxes-style-4">
+							<div class="featured-box featured-box-primary mt-none mb-none">
+								<div class="box-content">
+									<h2 class="mt-xlg pt-md mb-none"><strong>Now</strong> to the <span class="alternative-font font-size-md">Showing off</span> part</h2>
+									<p class="lead mb-none">A.K.A. Portfolio</p>
+
+									<img src="img/ellf/bag_of_ideas.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<div class="container">
+					<ul class="portfolio-list">
+						<!-- Item start -->
+						<li class="col-md-12 mt-xl" ng-repeat="item in portfolio">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="portfolio-item">
+										<a href="#!/projects/preview/{{item.page}}">
+											<span class="thumb-info thumb-info-no-zoom thumb-info-lighten">
+												<span class="thumb-info-wrapper">
+													<img src="img/projects/{{item.images.thumb}}" class="img-responsive" alt="">
+													<span class="thumb-info-action">
+														<span class="thumb-info-action-icon"><i class="fa fa-link"></i></span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="portfolio-info">
+										<div class="row">
+											<div class="col-md-12 center">
+												<ul>
+													<li>
+														 {{item.info}}
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<h2 class="heading-primary">{{item.title}}</h2>
+									<p class="mt-xlg" ng-bind-html="item.desc | trustfilter"></p>
+									<a href="#!/projects/preview/{{item.page}}" class="btn btn-primary">Looks interesting</a>
+								</div>
+							</div>
+						</li>
+						<!-- Item end -->
+					</ul>
+				</div>
+
+				
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html  ng-app="myApp" ng-controller="mainCtrl">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+
+		<title ng-bind="pageTitle + ' - An Idea For An App'">An Idea For An App</title>
+
+		<meta name="keywords" content="Software App Idea, {{pageTitle}}" />
+		<meta name="description" content="Web and Mobile applications development">
+		<meta name="author" content="{{pageAuthor ? pageAuthor : 'Naguib Ihab'}}">
+
+		<!-- Facebook Meta properties -->
+		<meta property="og:image" content="{{pageImg}}"/>
+		<meta property="og:title" content="An Idea for An App"/>
+		<meta property="og:url" content="{{pageUrl}}"/>
+		<meta property="og:site_name" content="An Idea for An App"/>
+		<meta property="og:type" content="blog"/>
+
+		<!-- Twitter Meta properties -->
+		<meta name="twitter:card" content="summary">
+		<meta property="twitter:image" content="{{ pageImg ? pageImg : 'img/logo.png' }}"/>
+		<meta property="twitter:title" content="{{pageTitle ? pageTitle+' - ' : '' }} An Idea for An App - {{pageUrl}}"/>
+		<meta property="twitter:url" content="{{pageUrl ? pageUrl : 'http://anideaforanapp.com'}}"/>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="vendor/animate/animate.min.css">
+		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+	
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+		<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+		<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="css/theme-blog.css">
+		<link rel="stylesheet" href="css/theme-shop.css">
+
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="css/skins/skin-shop-8.css">
+        
+        
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.min.js"></script>
+
+		<!-- Hotjar Tracking Code for http://anideaforanapp.com -->
+		<script>
+		    (function(h,o,t,j,a,r){
+		        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		        h._hjSettings={hjid:442089,hjsv:5};
+		        a=o.getElementsByTagName('head')[0];
+		        r=o.createElement('script');r.async=1;
+		        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		        a.appendChild(r);
+		    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+
+		<!-- Facebook Posts Embed -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1680990388872105";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-57408631-3']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+		/* ]]> */
+		</script>
+		<!-- End Google Analytics -->
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NV5CQ2Q');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- Crisp -->
+		<script type="text/javascript">$crisp=[];CRISP_WEBSITE_ID="af47c104-e493-443f-ac8e-c07bd6ff29ee";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+		</script>
+
+		<!-- AddThis--> 
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5911aebccb28a282&async=1"></script>
+	</head>
+	<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV5CQ2Q"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="fb-root"></div>
+    <script>
+    	(function(d, s, id) {
+	        var js, fjs = d.getElementsByTagName(s)[0];
+	        if (d.getElementById(id)) return;
+	        js = d.createElement(s); js.id = id;
+	        js.src = "//connect.facebook.net/en/all.js#xfbml=1&appId=1680990388872105";
+	        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+		<div class="body">
+
+			<div role="main" class="main">
+			<!-- <div class="webinar-text-top text-center" ng-show="showTopTimer">
+				Next webinar begins in 
+				<i class="fa fa-arrow-down fa-2" aria-hidden="true"></i> - 
+				<a href="#!/upcoming-webinar">click here</a> to signup!
+			</div>
+			<div class="container" ng-show="showTopTimer">
+					<div id="countdown">
+
+						<div class="time-component webinar-top">
+						  <div ng-bind="CountDown.days"></div>
+						  <div class="label">&nbsp;&nbsp;Days</div>
+						</div>
+						<div class="time-component webinar-top">
+						  <div ng-bind="CountDown.hours"></div>
+						  <div class="label">Hours</div>
+						</div>
+						<div class="time-component webinar-top">
+						  <div ng-bind="CountDown.minutes"></div>
+						  <div class="label">Minutes</div>
+						</div>
+						<div class="time-component webinar-top">
+						  <div ng-bind="CountDown.seconds"></div>
+						  <div class="label">Seconds</div>
+						</div>
+					</div>
+				</div> -->
+				<div id="intro">
+					<header ng-if="showHeaderAndFooter()" id="header" class="header-narrow" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": false, "stickyStartAtElement": "#header", "stickySetTop": "0", "stickyChangeLogo": false}'>
+						<div class="header-body">
+							<div class="header-container container">
+								<div class="header-row">
+									<div class="header-column">
+										<div class="header-logo">
+											<a href="index.html" class="logo-img">
+												<img alt="anideaforanapp" src="img/logo.png">
+											</a>
+
+											<h3 class="logo-txt vcenter text-center"><a href="index.html" class="logo-img">An Idea For An App</a></h3>
+										</div>
+									</div>
+									
+									<!-- <div class="header-column timer" id="timer">
+										<h5 class="header-logo heading-primary mt-lg" id="clockdiv">
+											<strong ng-bind="CountDown.days"></strong>Days
+											<strong ng-bind="CountDown.hours"></strong>Hours
+											<strong ng-bind="CountDown.minutes"></strong>Mins
+											<strong ng-bind="CountDown.seconds"></strong>Secs
+										</h5>
+										
+									</div> -->
+									<div class="header-column">
+										<div class="header-row">
+											<div class="header-nav">
+												<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+													<i class="fa fa-bars"></i>
+												</button>
+												<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+													<nav>
+														<ul class="nav nav-pills" id="mainNav">
+															<li>
+																<a href="#!/home" data-toggle="collapse" data-target=".header-nav-main">
+																	Home
+																</a>
+															</li><!-- 
+ 															<li>
+																<a href="#!/about">
+																	About us
+																</a>
+															</li> -->
+															<li>
+																<a href="#!/ourservices/service#development" data-toggle="collapse" data-target=".header-nav-main">
+																	Our services
+																</a>
+															</li>
+															<li>
+																<a href="#!/projects" data-toggle="collapse" data-target=".header-nav-main">
+																	Our projects
+																</a>
+															</li>
+															<!-- <li>
+																<a href="#!/rnd">
+																	R&D Tax Incentive
+																</a>
+															</li> -->
+															<li>
+																<a href="#!/blog" data-toggle="collapse" data-target=".header-nav-main">
+																	Blog
+																</a>
+															</li>
+															<!-- <li>
+																<a href="#!/upcoming-webinar" data-toggle="collapse" data-target=".header-nav-main">
+																	Upcoming Webinars & Meetups
+																</a>
+															</li> -->
+															<li>
+																<a href="#!/contact" data-toggle="collapse" data-target=".header-nav-main">
+																	Get in touch
+																</a>
+															</li>
+														</ul>
+													</nav>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</header>
+				</div>
+
+				<div id="bash" ng-if="bashShown()" class="hide-on-mobile">
+					<div class="text-editor-wrap">
+						<div class="title-bar"><span class="title">An idea for an app</span></div>
+						<div class="text-body">
+							> <span id="bashTyped"></span>
+						</div>
+					</div>
+				</div>
+
+			<div ng-view></div>
+				
+
+			<footer ng-if="showHeaderAndFooter()" id="footer">
+				<!-- <div class="footer-copyright">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-2 col-md-offset-5">
+								<a href="#!/home">
+									<img alt="Anideaforanapp" class="img-responsive" src="img/logo-footer.png">
+								</a>
+							</div>
+							<div class="col-md-12">
+								<h4>You'll never know what potential <span class="alternative-font">your idea</span> has until you see it in action. Life is too short for not taking risks!</h4>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- Begin MailChimp Signup Form -->
+
+				<newsletter-directive-form></newsletter-directive-form>
+
+				<!--End mc_embed_signup-->
+			</footer>
+		</div>
+		</div>
+		
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/common/common.min.js"></script>
+		<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="vendor/vide/vide.min.js"></script>
+		<script src="vendor/typed.js/js/typed.js"></script>
+
+		<!-- Bower components -->
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/angularfire/dist/angularfire.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-socialshare/lib/angular-socialshare.js"></script>
+        <script src="bower_components/angular-addthis/dist/angular-addthis.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="bower_components/angular-mailchimp/angular-mailchimp.js"></script>
+        <!-- <script src="bower_components/ngtweet/dist/ngtweet.min.js"></script> -->
+		
+
+		<!-- Angular Modules -->
+		<script src="app.js"></script>
+		<script src="modules/comingsoon/comingsoon.js"></script>
+		<script src="modules/home/home.js"></script>
+		<script src="modules/about/about.js"></script>
+		<script src="modules/projects/projects.js"></script>
+		<script src="modules/contact/contact.js"></script>
+		<script src="modules/webinar/webinar.js"></script>
+		<script src="modules/blog/blog.js"></script>
+		<script src="modules/ourservices/ourservices.js"></script>
+		<script src="modules/landingpages/landingpages.js"></script>
+		<script src="modules/static/static.js"></script>
+		<!-- Filters -->
+		<script src="modules/filters/filters.js"></script>
+		<!-- Services -->
+		<script src="modules/services/services.js"></script>
+		<script src="modules/services/auth.js"></script>
+		<script src="modules/services/portfolioService.js"></script>
+		<script src="modules/services/teamService.js"></script>
+		<script src="modules/services/ourservicesService.js"></script>
+		<script src="modules/services/blogService.js"></script>
+		<script src="modules/services/newsletterDirective.js"></script>
+		<script src="modules/services/landingNewsletterDirective.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+        
+		<!-- Current Page Vendor and Views -->
+		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+		<script src="js/views/view.home.js"></script>
+		
+        <!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+   		
+   		<script type="text/javascript">
+			$(window).scroll(function(e){ 
+			  var $el = $('#header'); 
+			  var isPositionFixed = ($el.css('position') == 'fixed');
+			  if ($(this).scrollTop() > 50 && !isPositionFixed){ 
+			  	if($( window ).width() > 990)
+			    	$('#header').css({'position': 'fixed', 'top': '0px'});
+			    else
+			    	$('#header').css({'top': '0px'});
+			  }
+			  if ($(this).scrollTop() < 50 && isPositionFixed)
+			  {
+			    $('#header').css({'position': 'static', 'top': '0px', 'width': '100%'}); 
+			  } 
+			});
+		</script>
+	</body>
+</html>
