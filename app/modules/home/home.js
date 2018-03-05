@@ -19,49 +19,14 @@ angular.module('myApp.home', ['ngRoute'])
 		/*End google analytics*/
 		$rootScope.pageTitle = 'Home';
 		$scope.portfolio = portfolioService.portfolio;
-		$scope.industries = this.industries = [
-			{
-				title:'Tradies',
-				icon: 'truck'
-			},
-			{
-				title:'Education',
-				icon: 'university'
-			},
-			{
-				title:'Disability',
-				icon: 'wheelchair'
-			},
-			{
-				title:'Childcare',
-				icon: 'child'
-			},
-			{
-				title:'Corporate',
-				icon: 'line-chart'
-			},
-			{
-				title:'Startups',
-				icon: 'slack'
-			},
-			{
-				title:'Finance',
-				icon: 'calculator'
-			},
-			{
-				title:'Marketing',
-				icon: 'wordpress'
-			}
-		];
+		
 		$scope.ourservices = {
 			firstrow: [
 				ourservicesService.services[0],
 				ourservicesService.services[1],
-				ourservicesService.services[2],
 			],
 			secondrow: [
-				ourservicesService.services[3],
-				ourservicesService.services[4]
+				ourservicesService.services[2],
 			]
 		}
 

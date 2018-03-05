@@ -9,6 +9,15 @@
   margin-left: 43%;
 }
 
+/* Images */
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 /* Typed css */
 #bash{
   display: none; /* By default it's hidden, home controller shows it */

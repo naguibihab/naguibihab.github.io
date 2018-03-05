@@ -10,12 +10,8 @@
 				
 						<div class="row">
 							<p class="lead">
-								We develop new apps every day and we have all the answers you're after.
+								You're in the right place <span class="alternative-font"><strong>!</strong></span>
 							</p>
-						</div>
-
-						<div class="row">
-							<a href="#!/contact" class="btn btn-lg btn-primary">Pick our brains, ask us anything</a>
 						</div>
 				
 					</div>
@@ -24,6 +20,36 @@
 				<!-- Our Services -->
 				<section class="section m-none">
 					<div class="container">
+
+						<!-- About -->
+						<div class="row">
+							<div class="col-md-12 center">
+								<h2>About me</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div>
+									<span class="img-thumbnail rotate90">
+										<img alt="" height="150" class="img-responsive" src="img/naguib.jpg">
+									</span>
+								</div>
+							</div>
+							<div class="col-md-8">
+
+								<h2 class="mb-none">Naguib Ihab <span class="alternative-font font-size-md">A.K.A. <strong>Nick</strong></span></h2>
+								<h4 class="heading-primary">Software Engineer & Technical Consultant</h4>
+
+								<hr class="solid">
+
+								<p>I am a developer who mainly works with startups, I helped multiple entrepreneurs get their <strong>ideas into reality</strong>. I am passionate about ideas that solve real world problems and contribute to a better society.</p>
+								<p> I help startups by guiding them in the right technical direction, helping them avoid common mistakes and work with what they have to get to where they need to be </p>
+								<p> I share & publish some awesome stuff, follow me on <a target="_blank" href="https://www.linkedin.com/in/naguib-ihab-2576b75a/">LinkedIn</a> or <a target="_blank" href="https://twitter.com/naguibIhab">Twitter</a> </p>
+
+							</div>
+						</div>
+
+						<!-- Services -->
 						<div class="row">
 							<div class="col-md-12 center">
 								<h2>Our <strong>Services</strong></h2>
@@ -31,15 +57,15 @@
 						</div>
 						<!-- First row -->
 						<div class="row mt-lg">
-							<div class="col-md-4 col-xs-12" ng-repeat="service in ourservices.firstrow">
+							<div class="col-md-6 col-xs-12" ng-repeat="service in ourservices.firstrow">
 								<div class="row">
-									<div class="col-md-5">
+									<div class="col-md-3">
 										<img class="img-responsive mb-lg" src="img/{{service.thumbnail}}" alt="">
 									</div>
-									<div class="col-md-7">
+									<div class="col-md-9">
 										<h4 class="mb-xs">{{service.title}}</h4>
 										<p>{{service.shortDescription}}</p>
-										<p><a class="btn-flat btn-xs" href="#!/ourservices/service#{{service.page}}">Read More <i class="fa fa-arrow-right"></i></a></p>
+										<p><a class="btn-flat btn-xs" href="#!/{{service.page}}">Know More <i class="fa fa-arrow-right"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -51,10 +77,10 @@
 									<div class="col-md-3">
 										<img class="img-responsive mb-lg" src="img/{{service.thumbnail}}" alt="">
 									</div>
-									<div class="col-md-7">
+									<div class="col-md-9">
 										<h4 class="mb-xs">{{service.title}}</h4>
 										<p>{{service.shortDescription}}</p>
-										<p><a class="btn-flat btn-xs" href="#!/ourservices/service#{{service.page}}">Read More <i class="fa fa-arrow-right"></i></a></p>
+										<p><a class="btn-flat btn-xs" href="#!/{{service.page}}">Read More <i class="fa fa-arrow-right"></i></a></p>
 									</div>
 								</div>
 							</div>
@@ -205,94 +231,6 @@
 						</div>
 
 					</div>
-				</div>
-
-				<!-- Counters + Industries -->
-				<section class="parallax section section-text-light section-parallax section-center mb-none" data-plugin-parallax="" data-plugin-options="{&quot;speed&quot;: 1.5}" data-image-src="img/parallax.jpg" style="background-image: url(&quot;img/parallax.jpg&quot;); background-position: 50% 187.333px;">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<h2 class="mb-xs">Industries we've worked with</strong></h2>
-								<div class="row white-font">
-									<div class="col-md-6 mt-xl" ng-repeat="industry in industries">
-										<i class="col-md-12 fa fa-{{industry.icon}} fz-30"></i>
-										<span class="col-md-12 mt-md fz-20">{{industry.title}}</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-
-								<h2 class="mb-xs">Our Stats</h2>
-
-								<div class="content-grid content-grid-dashed mt-xlg mb-lg">
-									<div class="row content-grid-row">
-										<div class="content-grid-item col-md-6 center">
-											<div class="counters">
-												<div class="counter counter-light counter-text-light">
-													<i class="fa fa-user"></i>
-													<strong data-to="20" data-append="+">0</strong>
-													<label>Happy Clients</label>
-												</div>
-											</div>	
-										</div>
-										<div class="content-grid-item col-md-6 center">
-											<div class="counters">
-												<div class="counter counter-light">
-													<i class="fa fa-clock-o"></i>
-													<strong data-to="2500" data-append="+">0</strong>
-													<label>Hours of Coding</label>
-												</div>
-											</div>	
-										</div>
-									</div>
-									<div class="row content-grid-row">
-										<div class="content-grid-item col-md-6 center">
-											<div class="counters">
-												<div class="counter counter-light">
-													<i class="fa fa-cloud"></i>
-													<strong data-to="60" data-append="+">0</strong>
-													<label> Ideas to Solutions</label>
-												</div>
-											</div>	
-										</div>
-										<div class="content-grid-item col-md-6 center">
-											<div class="counters">
-												<div class="counter counter-light">
-													<i class="fa fa-cloud-upload"></i>
-													<strong data-to="40" data-append="+">0</strong>
-													<label>Second Versions</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-							<div class="col-md-12 text-center white-font">
-								<h2 class="mt-lg">We work with all sizes, from <span class="fz-25">small mini</span> apps to <span class="fz-35">large SaaS</span> applications</h2>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- FAQ -->
-				<div class="container mt-lg">
-
-					<h4><i class="fa fa-question-circle-o"></i> How much does it cost to make an app</h4>
-					<p>Our prices start at $2000 for a proof of concept app, however, there are a lot of factors that go into pricing an app, the best way to know how much your app would cost is by <a href="#!/contact">contacting us</a> directly and get an accurate estimate.</p>
-
-					<h4><i class="fa fa-question-circle-o"></i> What is the process of making an app with you guys</h4>
-					<ul>
-						<li> Step 1 is having a chat over the phone to understand what you're after.</li>
-						<li> Step 2 is creating specs document or a basic mockup that summarises the application and what it does and how it does it</li>
-						<li> Step 3 is making an estimate of how much the app would cost and how long would it take to build. That estimate defines approximately how much the app would cost but does not provide an exact number</li>
-						<li> Step 4 is providing a detailed mockup with the design that covers the all of the application's functionality and clearly explains what the end result would look like. We take a downpayment between $200 - $500 to cover the cost of this design.</li>
-						<li> Step 5 is creating an accurate quotation that covers the exact cost (that would be around the estimate of step 3) and providing a delivery plan with dates </li>
-						<li> Step 6 is developing the application</li> 
-					</ul>
-					<p>
-						After the app is finished, we provide ongoing support and answer any questions you have about the application. If your application needs web hosting we provide a managed Amazon Web Serviecs hosting that covers all of your server needs.
-					</p>
 				</div>
 
 				<hr>
