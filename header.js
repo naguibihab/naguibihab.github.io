@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+document.write(`
 <head>
 
 <!-- Basic -->
@@ -506,6 +505,4 @@
 			</div>
 		</div>
 	</header>
-</div>
-</body>
-</html>
+`);

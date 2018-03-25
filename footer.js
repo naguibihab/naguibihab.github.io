@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<body>
-
-		<div class="body">
+document.write(`
 			<footer id="footer" class="light narrow">
 				<div class="container">
 					<div class="row">
@@ -91,4 +87,4 @@
 		 -->
 
 	</body>
-</html>
+`);
