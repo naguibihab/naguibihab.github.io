@@ -1,4 +1,4 @@
-<html ng-app="myApp" ng-controller="mainCtrl" style="" class="js no-touch history boxshadow csstransforms3d csstransitions video svg webkit chrome win sticky-header-enabled sticky-header-active gr__localhost ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<html ngclass="js no-touch history boxshadow csstransforms3d csstransitions video svg webkit chrome win sticky-header-enabled sticky-header-active gr__localhost ng-scope"><head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
@@ -68,32 +68,6 @@
 		<script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.9&amp;appId=1680990388872105"></script>
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
-		<!-- Facebook Posts Embed -->
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1680990388872105";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-
-		<!-- Google Analytics -->
-		<script type="text/javascript">
-		/* <![CDATA[ */
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-57408631-3']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-
-		(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
-		/* ]]> */
-		</script>
-		<!-- End Google Analytics -->
 
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -330,7 +304,7 @@
 					</div>
 
 					<div class="row" id="testimonial-seeall-button">
-						<button class="btn btn-borders btn-primary btn-lg" ng-click="displayAllTestimonials()">See more testimonials</button>
+						<button class="btn btn-borders btn-primary btn-lg" onclick="displayAllTestimonials()">See more testimonials</button>
 					</div>
 
 					<div class="row testimonial-row" id="testimonials-row-2">
@@ -442,9 +416,9 @@
 
 				<!-- 
 					#############################################
-					PORTFOLIO
+					CASE STUDIES
 					###########################################
-				-->
+				
 
 				<section class="parallax section section-text-light section-parallax section-center ng-scope" data-plugin-parallax="" data-plugin-options="{&quot;speed&quot;: 1.5}" data-image-src="img/parallax.jpg" style="background-image: url(&quot;img/parallax.jpg&quot;); background-position: 50% 2268.28px;">
 					<div class="container">
@@ -452,7 +426,7 @@
 							<div class="featured-box featured-box-primary mt-none mb-none">
 								<div class="box-content">
 									<h2 class="mt-xlg pt-md mb-none"><strong>Now</strong> to the <span class="alternative-font font-size-md">Showing off</span> part</h2>
-									<p class="lead mb-none">A.K.A. Portfolio</p>
+									<p class="lead mb-none">A.K.A. Case Studies</p>
 									<img src="img/ellf/bag_of_ideas.png">
 								</div>
 							</div>
@@ -484,7 +458,7 @@
 											<div class="col-md-12 center">
 												<ul>
 													<li >
-														 A Mobile Application
+														 An Offline Mobile Application
 													</li>
 												</ul>
 											</div>
@@ -495,7 +469,8 @@
 									<a href="projects/collectmore" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -528,7 +503,8 @@
 									<a href="projects/gimble" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -561,7 +537,8 @@
 									<a href="projects/emovey" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -594,7 +571,8 @@
 									<a href="projects/tool-tracker" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -627,7 +605,8 @@
 									<a href="projects/digups" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -660,7 +639,8 @@
 									<a href="projects/bigfuture" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio --><li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
+						</li>
+						<li class="col-md-12 mt-xl ng-scope" ng-repeat="item in portfolio">
 							<div class="row">
 								<div class="col-md-3">
 									<div class="portfolio-item">
@@ -693,10 +673,10 @@
 									<a href="#!/projects/preview/customcandy" class="btn btn-primary">Looks interesting</a>
 								</div>
 							</div>
-						</li><!-- end ngRepeat: item in portfolio -->
-						<!-- Item end -->
+						</li>
 					</ul>
 				</div>
+			-->
 
 				
 		<!-- Theme Initialization Files -->
