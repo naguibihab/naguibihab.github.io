@@ -1,0 +1,29 @@
+Address: <input id="input" value="President Avenue">
+<button id="submit" onclick="parseAddress()">Submit</button>
+<br>
+Output: <span id="output"></span>
+
+<script>
+	// https://en.wikipedia.org/wiki/Street_or_road_name#Street_type_designations
+	var designations = [
+		'Avenue',
+		'Boulevard',
+		'Parade',
+		'Road',
+		'Street'
+	]
+
+	function parseAddress(){
+		var address = document.getElementById("input").value;
+		var streetName = address;
+		
+		designations.forEach(function(designation){
+			if(address.indexOf(designation) > -1){
+				streetName = address.substr(0,address.indexOf(designation)-1);
+				console.log('Street Name: ',streetName);
+				console.log('Designation: ',designation);
+			}
+		})
+	}
+
+</script>
