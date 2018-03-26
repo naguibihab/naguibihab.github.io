@@ -2705,6 +2705,18 @@ html.dark .text-muted {
 	margin-top: 30px !important;
 }
 
+.mt-xxlg {
+	margin-top: 50px !important;
+}
+
+.mt-xxxlg {
+	margin-top: 70px !important;
+}
+
+.mt-tlg {
+	margin-top: 100px !important;
+}
+
 /* spacement bottom	*/
 .mb-none {
 	margin-bottom: 0 !important;

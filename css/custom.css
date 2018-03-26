@@ -1,1 +1,13 @@
 /* Add here all your CSS customizations */
+.ft-sm {
+	font-size: 50%;
+}
+.ft-md {
+	font-size: 75%;
+}
+.ft-lg {
+	font-size: 125%;
+}
+.ft-xlg { 
+	font-size: 150%;
+}
