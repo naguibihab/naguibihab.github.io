@@ -4,6 +4,14 @@ o Home:
 	+ My latest articles (Embed Medium or LinkedIn)
 o My Work:
 	+ Timeline of projects I worked in (blog-timeline.html)
+		- CTARS
+		- Peter's projects
+			+ Gimble
+			+ Digup calculator
+			+ The tool tracker
+		- Emovey
+		- EdQuire
+		- Check other projects in perceptivemind
 o Consulting:
 	+ What can I do for you
 	+ Get in touch
