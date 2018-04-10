@@ -1,0 +1,12 @@
+o Home:
+	+ About me
+	+ Testimonials
+	+ My latest articles
+	+ My projects
+o Consulting:
+	+ What can I do for you
+	+ Get in touch
+o Public Speaking:
+	+ Book me
+o Meetups & Workshops:
+	+ Embed meetup
