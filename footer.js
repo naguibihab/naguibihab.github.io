@@ -1,4 +1,6 @@
 document.write(`
+		</div> <!-- end of .body -->
+
 		<!-- Vendor -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
