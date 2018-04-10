@@ -1,8 +1,9 @@
 o Home:
 	+ About me
 	+ Testimonials
-	+ My latest articles
-	+ My projects
+	+ My latest articles (Embed Medium or LinkedIn)
+o My Work:
+	+ Timeline of projects I worked in (blog-timeline.html)
 o Consulting:
 	+ What can I do for you
 	+ Get in touch
