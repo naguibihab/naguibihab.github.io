@@ -1,46 +1,4 @@
 document.write(`
-			<footer id="footer" class="light narrow">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-9">
-							<ul class="nav nav-pills">
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="shortcodes.html">Shortcodes</a></li>
-								<li><a href="about-us.html">About Us</a></li>
-								<li><a href="portfolio-4-columns.html">Portfolio</a></li>
-								<li><a href="contact-us.html">Contact Us</a></li>
-							</ul>
-						</div>
-						<div class="col-md-3">
-							<div class="narrow-phone">
-								<h5 class="mb-sm">Contact Us</h5>
-								<span class="phone">(800) 123-4567</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-copyright">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-1">
-								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="img/logo-footer-dark.png">
-								</a>
-							</div>
-							<div class="col-md-7">
-								<p>© Copyright 2016. All Rights Reserved.</p>
-							</div>
-							<div class="col-md-4">
-								<ul class="social-icons pull-right">
-									<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-									<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-									<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
 
 		<!-- Vendor -->
