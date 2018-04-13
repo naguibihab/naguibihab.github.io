@@ -18,7 +18,6 @@
 
 										<article id="CTARS" class="timeline-box left post post-medium">
 											<div class="row">
-
 												<div class="col-md-12">
 													<div class="post-image">
 														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
@@ -38,13 +37,11 @@
 											</div>
 											<div class="row">
 												<div class="col-md-12">
-
 													<div class="post-content">
 														<h4 class="heading-primary">CTARS</h4>
 														<p>A <strong>SaaS product</strong> for health and disability organisations, it's a CRM type of application that manages the ins and outs of the day to day jobs of a carer. One of the most interesting things about CTARS is the form builder, because each organistaion is different in the way it handles and logs its patients medications or in the way it scales and reports an incident CTARS had to be flexible enough to accomodate any form and the logic behind the form; for example organisation A consider missed type X medication a critical incident, and so the primary and secondary carers for the patient that missed that medication have to be notified by SMS and the incident would show up on their dashboard until it has been resolved.</p>
 														<p><strong> The tech bit: </strong> Being able to store flexible forms and their logic in the database is easy even though we had to use Microsoft Database for a political reason, we can just throw everything form structure and its data into JSON and be done with it, but if we want to generate reports on the data contained in those forms meant that we had to be smart about how to store this data, at first JSON seemed like a good idea to store any form of flexible data but it becomes a nightmare to report on because nothing in that JSON form is indexed, we eneded up exploring adding indexes ourselves to any generated form and adding that in a separate table in the database, and as any change to the form structure happens we generate a new version of that form, thus when a report gets generated on columns A,B and C in form X version 2.53 we know how it is structured and so we can jump into the JSON data and grab these particular columns.</p>
 													</div>
-
 												</div>
 											</div>
 											<div class="row">
@@ -54,12 +51,10 @@
 													</div>
 												</div>
 											</div>
-
 										</article>
 
 										<article id="Gimble" class="timeline-box right post post-medium">
 											<div class="row">
-
 												<div class="col-md-12">
 													<div class="post-image">
 														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
@@ -79,29 +74,61 @@
 											</div>
 											<div class="row">
 												<div class="col-md-12">
-
 													<div class="post-content">
 														<h4 class="heading-primary">P.Honey: Gimble</h4>
-														<p classs="lead">Peter Honey is the owner of Priority Plus Plumbing, he hired me for a few years to build several <strong>decision support</strong> applications for his business that save him and his staff a huge amount of hours that would be spent on manual work, Gimble is one of them</p>
+														<p class="lead">Peter Honey is the owner of Priority Plus Plumbing, he hired me for a few years to build several <strong>decision support</strong> applications for his business that save him and his staff a huge amount of hours that would be spent on manual work, Gimble is one of them</p>
 														<p>As a plumber needs a great amount of different supplies each week or month to do their work including tools to replaced worn out ones and consumable items that have different sizes, the usual plumber sends out a quote request to multiple suppliers and the suppliers reply back with a PDF of the prices, these prices are custom made for each plumber and always change based on the quantity they're asking for and the distance between them and the supplier and other variables. To then compare different quotes is near to impossible, because not only does each supplier has a different name for the same tools but their PDF is unorganised and they may not have the exact amount the plumber is asking for, the manual solution for that would be to create a spreadsheet and manually enter each supplier's PDF cost against the correct tool and eventually after doing that the plumber would be able to choose the right tools from the right the suppliers and mix and match, unfortunately as this process would take hours it ends up costing more that its saving.</p>
-														<p>What Gimble does is automate that whole process... TODO HERE</p>
+														<p>So we automated that whole process using a bidding system; Gimble. The plumber signs up for Gimble and can immediately start creating quote requests which in turn gets sent out to the suppliers on the system, the suppliers then are able to reply with the PDF and the plumber can import that into the system which parses that PDF and captures the data from it, or the suppliers can use their Gimble account and enter that data directly into the system. From there the application is able to tell which tool is which even if each supplier gives it a different name in their PDF and it tells the plumber which tools are the cheapest from which supplier and it sends out emails to each supplier with the specific tools/supplies the plumber needs. All of that is done in a few moments which saved Peter hours in his business.</p>
+														<p><strong>The techy bit: </strong>The concept of the application itself is quite simple, two user types one creates requests and the other actions on them but the tricky bit was parsing the PDF, having multiple names for the same tool, understanding measurements and parsing them to a unified unit</p>
 													</div>
-
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-meta">
-														<span><i class="fa fa-calendar"></i> 2014 to 2016 </span><br>
+														<span><i class="fa fa-calendar"></i> 2014 to 2015 </span><br>
 													</div>
 												</div>
 											</div>
-
 										</article>
 
-										<div class="timeline-date">
-											<h3 class="heading-primary"><a href="#">Load More...</a></h3>
-										</div>
+										<article id="emovey" class="timeline-box right post post-medium">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-image">
+														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+																</div>
+															</div>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-content">
+														<h4 class="heading-primary">Emovey</h4>
+														<p>
+															Emovey is a survey application
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-meta">
+														<span><i class="fa fa-calendar"></i> 2014 to 2015 </span><br>
+													</div>
+												</div>
+											</div>
+										</article>
 
 									</div>
 

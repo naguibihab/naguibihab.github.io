@@ -6,7 +6,7 @@ o My Work:
 	+ Timeline of projects I worked in (blog-timeline.html)
 		> CTARS
 		- Peter's projects
-			+ Gimble
+			> Gimble
 			+ Digup calculator
 			+ The tool tracker
 		- Emovey
