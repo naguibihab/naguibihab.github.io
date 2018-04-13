@@ -1,10 +1,10 @@
 o Home:
-	+ About me
-	+ Testimonials
+	> About me
+	> Testimonials
 	+ My latest articles (Embed Medium or LinkedIn)
 o My Work:
 	+ Timeline of projects I worked in (blog-timeline.html)
-		- CTARS
+		> CTARS
 		- Peter's projects
 			+ Gimble
 			+ Digup calculator
