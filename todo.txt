@@ -7,10 +7,10 @@ o My Work:
 		> CTARS
 		- Peter's projects
 			> Gimble
-			+ Digup calculator
-			+ The tool tracker
-		- Emovey
-		- EdQuire
+			> Digup calculator
+			> The tool tracker
+		> Emovey
+		> EdQuire
 		- CollectMORE
 		- Voia (a hush hush project)
 o Consulting:

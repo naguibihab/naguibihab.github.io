@@ -12,11 +12,12 @@
 
 								<section class="timeline">
 									<div class="timeline-body">
+
 										<div class="timeline-date">
-											<h3 class="heading-primary">2014</h3>
+											<h3 class="heading-primary">2017</h3>
 										</div>
 
-										<article id="CTARS" class="timeline-box left post post-medium">
+										<article id="edquire" class="timeline-box left post post-medium">
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-image">
@@ -38,22 +39,19 @@
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-content">
-														<h4 class="heading-primary">CTARS</h4>
-														<p>A <strong>SaaS product</strong> for health and disability organisations, it's a CRM type of application that manages the ins and outs of the day to day jobs of a carer. One of the most interesting things about CTARS is the form builder, because each organistaion is different in the way it handles and logs its patients medications or in the way it scales and reports an incident CTARS had to be flexible enough to accomodate any form and the logic behind the form; for example organisation A consider missed type X medication a critical incident, and so the primary and secondary carers for the patient that missed that medication have to be notified by SMS and the incident would show up on their dashboard until it has been resolved.</p>
-														<p><strong> The tech bit: </strong> Being able to store flexible forms and their logic in the database is easy even though we had to use Microsoft Database for a political reason, we can just throw everything form structure and its data into JSON and be done with it, but if we want to generate reports on the data contained in those forms meant that we had to be smart about how to store this data, at first JSON seemed like a good idea to store any form of flexible data but it becomes a nightmare to report on because nothing in that JSON form is indexed, we eneded up exploring adding indexes ourselves to any generated form and adding that in a separate table in the database, and as any change to the form structure happens we generate a new version of that form, thus when a report gets generated on columns A,B and C in form X version 2.53 we know how it is structured and so we can jump into the JSON data and grab these particular columns.</p>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-12">
-													<div class="post-meta">
-														<span><i class="fa fa-calendar"></i> 2014 to 2016 </span><br>
+														<h4 class="heading-primary">edQuire</h4>
+														<p>One of the most sophisticated applications I have ever worked with. The application's purpose is to improve education by helping the teachers understand how their students are using the computer and what the flow of their activity is like and how distracted are they, all in realtime. The application has a brilliant deep machine learning framework working in the background that determines which activities are on or off task.</p>
+														<p>The tech bit: the application consists of three main components; a desktop application that gets installed on the students' computers, a backend that consists of multiple projects written in different languages such as R, Python, Node and PHP and an Angular frontend that handles the realtime reports by binding the frontned with listeners that keep checking the backend for updates.</p>
 													</div>
 												</div>
 											</div>
 										</article>
 
-										<article id="Gimble" class="timeline-box right post post-medium">
+										<div class="timeline-date">
+											<h3 class="heading-primary">2016</h3>
+										</div>
+
+										<article id="digup" class="timeline-box left post post-medium">
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-image">
@@ -75,24 +73,53 @@
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-content">
-														<h4 class="heading-primary">P.Honey: Gimble</h4>
-														<p class="lead">Peter Honey is the owner of Priority Plus Plumbing, he hired me for a few years to build several <strong>decision support</strong> applications for his business that save him and his staff a huge amount of hours that would be spent on manual work, Gimble is one of them</p>
-														<p>As a plumber needs a great amount of different supplies each week or month to do their work including tools to replaced worn out ones and consumable items that have different sizes, the usual plumber sends out a quote request to multiple suppliers and the suppliers reply back with a PDF of the prices, these prices are custom made for each plumber and always change based on the quantity they're asking for and the distance between them and the supplier and other variables. To then compare different quotes is near to impossible, because not only does each supplier has a different name for the same tools but their PDF is unorganised and they may not have the exact amount the plumber is asking for, the manual solution for that would be to create a spreadsheet and manually enter each supplier's PDF cost against the correct tool and eventually after doing that the plumber would be able to choose the right tools from the right the suppliers and mix and match, unfortunately as this process would take hours it ends up costing more that its saving.</p>
-														<p>So we automated that whole process using a bidding system; Gimble. The plumber signs up for Gimble and can immediately start creating quote requests which in turn gets sent out to the suppliers on the system, the suppliers then are able to reply with the PDF and the plumber can import that into the system which parses that PDF and captures the data from it, or the suppliers can use their Gimble account and enter that data directly into the system. From there the application is able to tell which tool is which even if each supplier gives it a different name in their PDF and it tells the plumber which tools are the cheapest from which supplier and it sends out emails to each supplier with the specific tools/supplies the plumber needs. All of that is done in a few moments which saved Peter hours in his business.</p>
-														<p><strong>The techy bit: </strong>The concept of the application itself is quite simple, two user types one creates requests and the other actions on them but the tricky bit was parsing the PDF, having multiple names for the same tool, understanding measurements and parsing them to a unified unit</p>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-12">
-													<div class="post-meta">
-														<span><i class="fa fa-calendar"></i> 2014 to 2015 </span><br>
+														<h4 class="heading-primary">P.Honey: Digup Calculator</h4>
+														<p class="lead">Peter Honey is the owner of Priority Plus Plumbing, he hired me for a few years to build several <strong>decision support</strong> applications for his business that save him and his staff a huge amount of hours that would be spent on manual work</p>
+														<p>Another one of the Honey apps, a simple responsive web app that would help his staff to calculate quotations for a dig up job by entering in the depth of the dig up, width, type of surface and around twenty other variables that would end up calculating the tools and supplies needed to do the job and the average cost of each item and any council fees and rented equipment such as a excavator then it adds in a profit margin and it gives the plumber PDF to email to the client then and there. Before the app, the quote would take around two days to be calculated by someone who knows the equations.</p>
+														<p>After developing the first version of the application for Peter's business, we made some extra modifications on it to make flexible, so that the user can enter in the equations and modify the quotation template.</p>
+														<p>The tech bit: It was hard to resist hardcoding the equations, but because hardcoding is never sustainable for the application to grow, we were able to store the equations for each question in the application, each question has three affects:
+															<ul>
+																<li> The tools/supplies does it need </li>
+																<li> If it adds a static cost </li>
+																<li> If it affects another variable </li> 
+															</ul>
+														and so each question had these three columns saved in the database and controling te way it affects the end result.</p>
 													</div>
 												</div>
 											</div>
 										</article>
 
-										<article id="emovey" class="timeline-box right post post-medium">
+										<article id="tooltracker" class="timeline-box right post post-medium">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-image">
+														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+																</div>
+															</div>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-content">
+														<h4 class="heading-primary">P.Honey: The Tool Tracker</h4>
+														<p>Another one of the Honey apps: a who-has-what application that helps Peter and his staff know where are their tools. As Peter's staff grab equipment from the office and go out to a job then forget it in the truck or give it to a colleague without marking it in the ledger. Eventually when someone needs it, the office has to call up each plumber they suspect might have taken it, and it gets harder if one of them is on a leave.</p>
+														<p>The web and mobile app acts as a digital ledger, each of Peter's staff has it on their phone and when they take a tool from the office they find that tool in the app and drag it to their truck, when they give a tool to each other they do an exchange in the app, and the receiving end has to confirm that they have received it. At any point in time the office can see where each tool is, its condition, and its history log.</p>
+													</div>
+												</div>
+											</div>
+										</article>
+
+										<article id="emovey" class="timeline-box left post post-medium">
 											<div class="row">
 												<div class="col-md-12">
 													<div class="post-image">
@@ -116,15 +143,78 @@
 													<div class="post-content">
 														<h4 class="heading-primary">Emovey</h4>
 														<p>
-															Emovey is a survey application
+															Emovey is a survey application based on emojis, you simply can go in, build your own collection of questions, each question can have different emojis as answers and bam you have a survey to embed in your website or send directly to your customers. 
 														</p>
+														<p>
+															In 2017 Emovey was used by Roc Eyewear for their campaign, so if you have answered a Roc Eyewear Survey  customer, you may have used Emovey.
+															<img title="emovey-rockeyewear" class="img-responsive" src="img/projects/emovey/roceyewear.png"/>
+														</p>
+													</div>
+												</div>
+											</div>
+										</article>
+
+										<div class="timeline-date">
+											<h3 class="heading-primary">2015</h3>
+										</div>
+
+										<article id="ctars" class="timeline-box left post post-medium">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-image">
+														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+																</div>
+															</div>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="row">
 												<div class="col-md-12">
-													<div class="post-meta">
-														<span><i class="fa fa-calendar"></i> 2014 to 2015 </span><br>
+													<div class="post-content">
+														<h4 class="heading-primary">CTARS</h4>
+														<p>A <strong>SaaS product</strong> for health and disability organisations, it's a CRM type of application that manages the ins and outs of the day to day jobs of a carer. One of the most interesting things about CTARS is the form builder, because each organistaion is different in the way it handles and logs its patients medications or in the way it scales and reports an incident CTARS had to be flexible enough to accomodate any form and the logic behind the form; for example organisation A consider missed type X medication a critical incident, and so the primary and secondary carers for the patient that missed that medication have to be notified by SMS and the incident would show up on their dashboard until it has been resolved.</p>
+														<p>CTARS eventually was able to secure over a million dollars in funding and went on to become a successfull tech company</p>
+														<p><strong> The tech bit: </strong> Being able to store flexible forms and their logic in the database is easy even though we had to use Microsoft Database for a political reason, we can just throw everything form structure and its data into JSON and be done with it, but if we want to generate reports on the data contained in those forms meant that we had to be smart about how to store this data, at first JSON seemed like a good idea to store any form of flexible data but it becomes a nightmare to report on because nothing in that JSON form is indexed, we eneded up exploring adding indexes ourselves to any generated form and adding that in a separate table in the database, and as any change to the form structure happens we generate a new version of that form, thus when a report gets generated on columns A,B and C in form X version 2.53 we know how it is structured and so we can jump into the JSON data and grab these particular columns.</p>
+													</div>
+												</div>
+											</div>
+										</article>
+
+										<article id="gimble" class="timeline-box right post post-medium">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-image">
+														<div class="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-1.jpg" alt="">
+																</div>
+															</div>
+															<div>
+																<div class="img-thumbnail">
+																	<img class="img-responsive" src="img/blog/blog-image-2.jpg" alt="">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="post-content">
+														<h4 class="heading-primary">P.Honey: Gimble</h4>
+														<p>As a plumber needs a great amount of different supplies each week or month to do their work including tools to replaced worn out ones and consumable items that have different sizes, the usual plumber sends out a quote request to multiple suppliers and the suppliers reply back with a PDF of the prices, these prices are custom made for each plumber and always change based on the quantity they're asking for and the distance between them and the supplier and other variables. To then compare different quotes is near to impossible, because not only does each supplier has a different name for the same tools but their PDF is unorganised and they may not have the exact amount the plumber is asking for, the manual solution for that would be to create a spreadsheet and manually enter each supplier's PDF cost against the correct tool and eventually after doing that the plumber would be able to choose the right tools from the right the suppliers and mix and match, unfortunately as this process would take hours it ends up costing more that its saving.</p>
+														<p>So we automated that whole process using a bidding system; Gimble. The plumber signs up for Gimble and can immediately start creating quote requests which in turn gets sent out to the suppliers on the system, the suppliers then are able to reply with the PDF and the plumber can import that into the system which parses that PDF and captures the data from it, or the suppliers can use their Gimble account and enter that data directly into the system. From there the application is able to tell which tool is which even if each supplier gives it a different name in their PDF and it tells the plumber which tools are the cheapest from which supplier and it sends out emails to each supplier with the specific tools/supplies the plumber needs. All of that is done in a few moments which saved Peter hours in his business.</p>
+														<p><strong>The techy bit: </strong>The concept of the application itself is quite simple, two user types one creates requests and the other actions on them but the tricky bit was parsing the PDF, having multiple names for the same tool, understanding measurements and parsing them to a unified unit</p>
 													</div>
 												</div>
 											</div>
