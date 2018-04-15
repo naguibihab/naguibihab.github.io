@@ -11,7 +11,7 @@ o My Work:
 			> The tool tracker
 		> Emovey
 		> EdQuire
-		- CollectMORE
+		> CollectMORE
 		- Voia (a hush hush project)
 o Consulting:
 	+ What can I do for you
