@@ -62,16 +62,6 @@ document.write(`
 							<p>
 								Get in touch! <span class="hidden-xs"> | <a href="mailto:nick@anideaforanapp.com">nick@anieaforanapp.com</a></span>
 							</p>
-							<div class="header-search hidden-xs">
-								<form id="searchForm" action="page-search-results.html" method="get">
-									<div class="input-group">
-										<input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-										</span>
-									</div>
-								</form>
-							</div>
 						</div>
 					</div>
 					<div class="header-container container">
