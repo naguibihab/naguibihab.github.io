@@ -15,3 +15,19 @@
 .white {
 	color: white;
 }
+
+.mt-xlg {
+	margin-top: 30px !important;
+}
+
+.mt-xxlg {
+	margin-top: 50px !important;
+}
+
+.mt-xxxlg {
+	margin-top: 70px !important;
+}
+
+.mt-tlg {
+	margin-top: 100px !important;
+}

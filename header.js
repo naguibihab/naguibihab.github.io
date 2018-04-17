@@ -55,60 +55,72 @@ document.write(`
 <body>
 
 <div class="body">
-	<header id="header" class="header-narrow header-semi-transparent" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 1, "stickySetTop": "1"}'>
-		<div class="header-body">
-			<div class="header-container container">
-				<div class="header-row">
-					<div class="header-column">
-						<div class="header-logo">
-							<a href="index.html">
-								<img alt="Porto" height="40" src="img/logo-default-slim-dark.png">
-							</a>
+	<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 140, "stickySetTop": "-140px"}'>
+				<div class="header-body">
+					<div class="header-top">
+						<div class="container">
+							<p>
+								Get in touch! <span class="hidden-xs"> | <a href="mailto:nick@anideaforanapp.com">nick@anieaforanapp.com</a></span>
+							</p>
+							<div class="header-search hidden-xs">
+								<form id="searchForm" action="page-search-results.html" method="get">
+									<div class="input-group">
+										<input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+										</span>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
-					<div class="header-column">
+					<div class="header-container container">
 						<div class="header-row">
-							<div class="header-nav header-nav-stripe">
-								<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-									<i class="fa fa-bars"></i>
-								</button>
-								<ul class="header-social-icons social-icons hidden-xs">
-									<li class="social-icons-twitter"><a href="http://www.twitter.com/naguibihab" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-									<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-									<li class="social-icons-github"><a href="http://www.github.com/naguibihab" target="_blank" title="Github"><i class="fa fa-github"></i></a></li>
-									<li class="social-icons-stack-overflow"><a href="http://www.stackoverflow.com/" target="_blank" title="StackOverflow"><i class="fa fa-stack-overflow"></i></a></li>
-								</ul>
-								<div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1 collapse">
-									<nav>
-										<ul class="nav nav-pills" id="mainNav">
-											<li class="">
-												<a href="home.html">
-													Home
-												</a>
-											</li>
-											<li class="">
-												<a href="consulting.html">
-													Consulting
-												</a>
-											</li>
-											<li class="">
-												<a href="meetups.html">
-													Meetups & Workshops
-												</a>
-											</li>
-											<li class="">
-												<a href="mywork.html">
-													My Portfolio
-												</a>
-											</li>
-										</ul>
-									</nav>
+							<div class="header-column header-column-center">
+								<div class="header-logo">
+									<a href="index.html">
+										<img alt="Porto" width="45" height="54" src="img/logo-default.png">
+									</a>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="header-container container header-nav header-nav-center">
+						<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+							<i class="fa fa-bars"></i>
+						</button>
+						<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+							<nav>
+								<ul class="nav nav-pills" id="mainNav">
+									<li class="">
+										<a href="home.html">
+											Home
+										</a>
+									</li>
+									<li class="">
+										<a href="consulting.html">
+											Consulting
+										</a>
+									</li>
+									<li class="">
+										<a href="speaking.html">
+											Public speaking
+										</a>
+									</li>
+									<li class="">
+										<a href="meetups.html">
+											Meetups & Workshops
+										</a>
+									</li>
+									<li class="">
+										<a href="mywork.html">
+											My Portfolio
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</header>
+			</header>
 `);
