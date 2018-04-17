@@ -82,8 +82,8 @@ document.write(`
 									<nav>
 										<ul class="nav nav-pills" id="mainNav">
 											<li class="">
-												<a href="blog.html">
-													Blog
+												<a href="home.html">
+													Home
 												</a>
 											</li>
 											<li class="">
@@ -92,13 +92,13 @@ document.write(`
 												</a>
 											</li>
 											<li class="">
-												<a href="speaking.html">
-													Public speaking
+												<a href="meetups.html">
+													Meetups & Workshops
 												</a>
 											</li>
 											<li class="">
-												<a href="meetups.html">
-													Meetups & Workshops
+												<a href="mywork.html">
+													My Portfolio
 												</a>
 											</li>
 										</ul>
