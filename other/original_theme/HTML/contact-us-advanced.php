@@ -102,7 +102,8 @@ if(isset($_POST['emailSent'])) {
 
 }
 ?>
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 	<head>
 
 		<!-- Basic -->
@@ -141,7 +142,7 @@ if(isset($_POST['emailSent'])) {
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css">
+		<link rel="stylesheet" href="css/skins/skin-photography.css">
 
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
