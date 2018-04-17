@@ -43,7 +43,7 @@ document.write(`
 <link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
 
 <!-- Skin CSS -->
-<link rel="stylesheet" href="css/skins/default.css">
+<link rel="stylesheet" href="css/skins/skin-photography.css">
 
 <!-- Theme Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
