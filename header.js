@@ -93,18 +93,18 @@ document.write(`
 										</a>
 									</li>
 									<li class="">
+										<a href="mywork.html">
+											My Work
+										</a>
+									</li>
+									<li class="">
 										<a href="speaking.html">
 											Public speaking
 										</a>
 									</li>
 									<li class="">
 										<a href="meetups.html">
-											Meetups & Workshops
-										</a>
-									</li>
-									<li class="">
-										<a href="mywork.html">
-											My Portfolio
+											Meetups <i class="fa fa-external-link"></i>
 										</a>
 									</li>
 								</ul>

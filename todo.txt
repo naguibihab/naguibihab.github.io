@@ -23,14 +23,13 @@ o Consulting:
 	> Testimonials
 	> Get in touch
 o Public Speaking:
-	+ Bio
-	+ Headshot
-	+ Speaking topics
-		+ 
+	> Bio
+	> Headshot
+	> Speaking topics 
 	+ Previous speaking experience
-	+ Book me
+	> Book me
 o Meetups & Workshops:
-	+ Embed meetup
+	> Embed meetup
 o Blog
 	+ Articles from LinkedIn (/articles/myarticletitle.html)
 
