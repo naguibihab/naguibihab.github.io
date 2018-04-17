@@ -1,6 +1,26 @@
 document.write(`
 		</div> <!-- end of .body -->
 
+		<footer id="footer" class="mt-none">
+				<div class="container">
+					<div class="row">
+						<div class="footer-ribbon">
+							<span>Get in Touch</span>
+						</div>
+						<div class="col-md-10">
+							<h4>To get in touch with me, email me at <a href="mailto:nick@anideaforanapp.com">nick@anideaforanapp.com</a> or send me a message on <a href="https://www.linkedin.com/in/naguibihab" target="_blank">LinkedIn</a></h4>
+						</div>
+						<div class="col-md-2">
+							<h4>Follow Me</h4>
+							<ul class="social-icons">
+								<li class="social-icons-twitter"><a href="http://www.twitter.com/naguibihab" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li class="social-icons-linkedin"><a href="http://www.linkedin.com/in/naguibihab" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+
 		<!-- Vendor -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
