@@ -1,42 +1,12 @@
 o Home:
-	> About me
-	> Testimonials
 	+ My latest articles -> two stories then link to blog
-> My Work:
-	> Timeline of projects I worked in (blog-timeline.html)
-		> CTARS
-		> Peter's projects
-			> Gimble
-			> Digup calculator
-			> The tool tracker
-		> Emovey
-		> EdQuire
-		> CollectMORE
-		> Voia (a hush hush project)
-		> Tribees
-o Consulting:
-	> What can I do for you
-		> My speciality is in breaking down a big project into phases, milestones and tasks then estimate the cost of each phase and building a team with the needed skills.
-		> I focus on one client at a time next to my full time job with a few exceptions, so I make sure I am fully dedicated to the project.
-		> I don't charge a margin like most software companies instead, I charge for my own hours and each member of the team charges the client directly; by doing so it's clear where the money is being spent.
-		> I follow an extreme agile methodology and require my client to be available throughout the whole project and involved in each meeting and minor decisions.
-	> Testimonials
-	> Get in touch
-o Public Speaking:
-	> Bio
-	> Headshot
-	> Speaking topics 
-	+ Previous speaking experience
-	> Book me
-o Meetups & Workshops:
-	> Embed meetup
+	+ My latest tweets
 o Blog
 	+ Articles from LinkedIn (/articles/myarticletitle.html)
-
 
 o Images:
 	+ 2 Images for each project in mywork page
 	+ Parallax Image for the consulting page
 	+ Parallax Image for the meetup page
 
-+ Grammar check on every page
++ Point anideaforanapp.com to the github repo on prod branch

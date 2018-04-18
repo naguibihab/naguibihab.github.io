@@ -5,7 +5,7 @@ document.write(`
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-<title>Porto - Responsive HTML5 Template 5.2.0</title>	
+<title>An Idea For An App - Naguib Ihab</title>	
 
 <meta name="keywords" content="HTML5 Template" />
 <meta name="description" content="Porto - Responsive HTML5 Template">
@@ -83,7 +83,7 @@ document.write(`
 							<nav>
 								<ul class="nav nav-pills" id="mainNav">
 									<li class="">
-										<a href="home.html">
+										<a href="index.html">
 											Home
 										</a>
 									</li>
