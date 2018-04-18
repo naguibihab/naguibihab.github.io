@@ -103,7 +103,7 @@ document.write(`
 										</a>
 									</li>
 									<li class="">
-										<a href="meetups.html">
+										<a href="https://www.meetup.com/I-have-an-idea-for-an-app/" target="_blank">
 											Meetups <i class="fa fa-external-link"></i>
 										</a>
 									</li>
