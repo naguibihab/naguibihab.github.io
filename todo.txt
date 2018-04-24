@@ -1,8 +1,6 @@
 o Home:
 	+ My latest articles -> two stories then link to blog
 	+ My latest tweets
-o Blog
-	+ Articles from LinkedIn (/articles/myarticletitle.html)
 
 o Images:
 	+ 2 Images for each project in mywork page
