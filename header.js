@@ -8,8 +8,8 @@ document.write(`
 <title>An Idea For An App - Naguib Ihab</title>	
 
 <meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="Porto - Responsive HTML5 Template">
-<meta name="author" content="okler.net">
+<meta name="description" content="An Idea For An App website">
+<meta name="author" content="Naguib Ihab">
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />

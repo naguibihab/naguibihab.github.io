@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<script src="header.js"></script>
+
+	<div role="main" class="main ng-scope">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h4>Default</h4>
+					<div class="owl-carousel owl-theme stage-margin" data-plugin-options='{"items": 6, "margin": 10, "loop": false, "nav": true, "dots": false, "stagePadding": 40}'>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-5.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-6.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-7.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-1.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-2.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-3.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-1.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-2.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-3.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-4.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="project-logo img-responsive col-md-offset-3" src="img/projects/collectmore/logo.jpg">
+					<!-- ngIf: proj.images.web -->
+				</div>
+			</div>
+
+			<h2 class="mt-lg mb-sm ng-binding">CollectMore : A Mobile Application</h2>
+			<hr>
+
+			<div class="row">
+
+				<div class="col-md-8">
+
+					<h5 class="mb-xs heading-primary"><b>About The App</b></h5>
+					<p class="mt-none mb-xlg fz-18 ng-binding" ng-bind-html="::proj.desc | trustfilter">CollectMore gives you advice based on your input, the pupose of the app is to help you collect your debt. Based on the amount of debt, the time it remains outstanding, what the client has told you and other information, the app would use internal logic to identify which advice suits you best. <br> In addition to that the app also gives you SMS and Email templates that you can use to contact your client and it even <b>recommends</b> one for each of your unique debts.</p>
+
+					<h5 class="mb-xs heading-primary"><b>The Story</b></h5>
+					<p class="mt-none mb-xlg fz-18 ng-binding" ng-bind-html="::proj.story | trustfilter">I first metup with Paul after he had created his ios version of the app but the company that he was with was overcharging him and delivering a poor quality code. <br> I did the initial android version for Paul and after a few months I did the second version for both the Android and the IOS apps. Paul's app is now one of the top 50 downloaded business apps in Australia</p>
+
+					<!-- ngIf: proj.demo --><div ng-if="proj.demo" class="heading heading-border ng-scope">
+						<h2>See the the actual app <span class="inverted inverted-primary">in action!</span></h2>
+					</div><!-- end ngIf: proj.demo -->
+					<!-- Demo links -->
+					<!-- ngIf: proj.demo.web --> 
+
+					<!-- ngIf: proj.demo.android --><a ng-if="proj.demo.android" href="https://play.google.com/store/apps/developer?id=Collectmore+Debt+Solutions+Pty+Ltd" class="btn btn-primary btn-icon ng-scope" target="_blank">
+					<i class="fa fa-android"></i>Android</a><!-- end ngIf: proj.demo.android -->
+
+					<!-- ngIf: proj.demo.ios --><a ng-if="proj.demo.ios" href="https://itunes.apple.com/us/developer/copyright-2015-collectmore/id1032172900" class="btn btn-primary btn-icon ng-scope" target="_blank">
+					<i class="fa fa-apple"></i>IPhone</a><!-- end ngIf: proj.demo.ios -->
+
+					<!-- ngIf: proj.demo.walkthrough -->
+
+
+					<!-- ngIf: proj.demo --><span ng-if="proj.demo" class="arrow hlb appear-animation ng-scope animated rotateInUpLeft appear-animation-visible" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span><!-- end ngIf: proj.demo -->
+
+					<hr>
+
+					<ul class="portfolio-details mt-none mb-xl">
+						<li>
+							<h5 class="mb-xs heading-primary"><b>The Client</b></h5>
+							<p class="ng-binding">Paul Metcalf
+							<!-- ngIf: proj.prod --><span ng-if="proj.prod" class="ng-scope"> - <a href="http://collectmore.com.au" target="_blank" class="ng-binding">collectmore.com.au </a><i class="fa fa-external-link"></i> 
+							</span><!-- end ngIf: proj.prod --></p>
+						</li>
+					</ul>
+
+					<!-- ngIf: proj.testimonial --><div ng-if="proj.testimonial" class="testimonial testimonial-style-4 ng-scope">
+						<blockquote>
+							<p class="ng-binding">Nick and I started discussing him making the Android version for me back in January and from the very beginning I knew he knew his stuff and was someone I felt confident would represent my business in the best possible light. I think as small business owners when we engage another business to do something for us, them actually doing the job is only part of the overall experience- how they go about their work, their values and morals and how professional they are throughout the relationship is just as important, at least it is for me anyway. Nick ticked every single one of these boxes and it got to a stage where he was more annoyed at the thought of him missing deadlines than I was. I was continually kept updated and his attention to detail was incredible- he refused to proceed with something unless it was perfect. If you need a website or app built to an extremely high standard by an ultimate professional, then Nick is your man. Highly recommended- thanks again mate.</p>
+						</blockquote>
+						<div class="testimonial-arrow-down"></div>
+						<div class="testimonial-author">
+							<!-- ngIf: proj.client.pic --><div ng-if="proj.client.pic" class="testimonial-author-thumbnail ng-scope">
+								<img alt="CollectMore-anideaforanapp" class="img-responsive img-circle" src="img/clients/paul.jpg">
+							</div><!-- end ngIf: proj.client.pic -->
+							<p><strong class="ng-binding">Paul Metcalf</strong><span class="ng-binding">Founder - CollectMore Pty Ltd</span></p>
+						</div>
+					</div><!-- end ngIf: proj.testimonial -->
+
+				</div>
+
+				<div class="col-md-4">
+					<div class="owl-carousel owl-theme show-nav-hover" data-plugin-options='{"items": 1, "margin": 10, "loop": false, "nav": true, "dots": false}'>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-1.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-2.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-1.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-2.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-3.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-4.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-3.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-4.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-5.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-6.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-7.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-1.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-2.jpg">
+						</div>
+						<div>
+							<img alt="" class="img-responsive img-rounded" src="img/team/team-3.jpg">
+						</div>
+					</div>
+				</div>
+
+				<!-- ngIf: proj.images.mockup --><div class="col-md-12 ng-scope" ng-if="proj.images.mockup">
+					<hr>
+					<h4> It took some <strong>strong</strong> planning </h4>
+					<div class="owl-carousel owl-theme show-nav-hover mt-none owl-loaded owl-drag owl-carousel-init" data-plugin-options="{"items": 1, "margin": 10, "loop": true, "nav": true, "animateOut": "fadeOut"}">
+						<!-- ngRepeat: image in proj.images.mockup --><!-- end ngRepeat: image in proj.images.mockup -->
+					<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2300px, 0px, 0px); transition: 0s; width: 5750px;"><div class="owl-item cloned" style="width: 1140px; margin-right: 10px;"><div ng-repeat="image in proj.images.mockup" class="ng-scope">
+							<span class="img-thumbnail">
+								<img src="img/projects/collectmore/v2/collectmore_mockup_1.png" class="img-responsive" alt="CollectMore-anideaforanapp">
+							</span>
+						</div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 10px;"><div ng-repeat="image in proj.images.mockup" class="ng-scope">
+							<span class="img-thumbnail">
+								<img src="img/projects/collectmore/v2/collectmore_mockup_1.png" class="img-responsive" alt="CollectMore-anideaforanapp">
+							</span>
+						</div></div><div class="owl-item active" style="width: 1140px; margin-right: 10px;"><div ng-repeat="image in proj.images.mockup" class="ng-scope">
+							<span class="img-thumbnail">
+								<img src="img/projects/collectmore/v2/collectmore_mockup_1.png" class="img-responsive" alt="CollectMore-anideaforanapp">
+							</span>
+						</div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 10px;"><div ng-repeat="image in proj.images.mockup" class="ng-scope">
+							<span class="img-thumbnail">
+								<img src="img/projects/collectmore/v2/collectmore_mockup_1.png" class="img-responsive" alt="CollectMore-anideaforanapp">
+							</span>
+						</div></div><div class="owl-item cloned" style="width: 1140px; margin-right: 10px;"><div ng-repeat="image in proj.images.mockup" class="ng-scope">
+							<span class="img-thumbnail">
+								<img src="img/projects/collectmore/v2/collectmore_mockup_1.png" class="img-responsive" alt="CollectMore-anideaforanapp">
+							</span>
+						</div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"></div><div class="owl-next"></div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+				</div><!-- end ngIf: proj.images.mockup -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+<script src="footer.js"></script>
+</html>
