@@ -6,14 +6,17 @@ o Home:
 		+ Development skills
 
 o Images:
-	+ 2 Images for each project in mywork page
 	+ Parallax Image for the consulting page
 	+ Parallax Image for the meetup page
 
 o A page for each project:
 	> CollectMore
+	> Emovey
+	> Gimble
+	+ Tool tracker (Without desktop images)
 	+ edQuire
-	+ Emovey
 	+ CTARS
+
++ Add Alt to all images
 
 + Point anideaforanapp.com to the github repo on prod branch
