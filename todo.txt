@@ -1,10 +1,19 @@
 o Home:
 	+ My latest articles -> two stories then link to blog
-	+ My latest tweets
+	+ My skill set
+		+ Product design
+		+ Analysis..etc
+		+ Development skills
 
 o Images:
 	+ 2 Images for each project in mywork page
 	+ Parallax Image for the consulting page
 	+ Parallax Image for the meetup page
+
+o A page for each project:
+	> CollectMore
+	+ edQuire
+	+ Emovey
+	+ CTARS
 
 + Point anideaforanapp.com to the github repo on prod branch
