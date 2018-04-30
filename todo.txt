@@ -19,4 +19,4 @@ o A page for each project:
 
 + Add Alt to all images
 
-+ Point anideaforanapp.com to the github repo on prod branch
++ Deploy from github to s3
