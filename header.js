@@ -60,7 +60,7 @@ document.write(`
 					<div class="header-top">
 						<div class="container">
 							<p>
-								Get in touch! <span class="hidden-xs"> | <a href="mailto:nick@anideaforanapp.com">nick@anieaforanapp.com</a></span>
+								Get in touch! <span class="hidden-xs"> | <a href="mailto:nick@anideaforanapp.com">nick@anideaforanapp.com</a></span>
 							</p>
 						</div>
 					</div>
