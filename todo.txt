@@ -13,10 +13,29 @@ o A page for each project:
 	> CollectMore
 	> Emovey
 	> Gimble
-	+ Tool tracker (Without desktop images)
+	> Tool tracker
 	+ edQuire
+		+ Image included but needs some work (remove from gitignore when finished)
 	+ CTARS
 
 + Add Alt to all images
 
+o Add in the mini projects from github:
+	+ WhatFirst
+	+ Useful batch files
+
++ Add in projects from Lucidchart (Other projects - My Work)
+	+ Ateball
+		An app that helps a group of hungry foodies decide what to eat by recommending cuisines that fits each person of the group
+	+ Rhyme Master
+		An online game where you play against the computer or the clock in taking turns to write words that rhyme with the given word
+	+ My Guniea Pig
+		An app that helps guinea pig owners understand what their pets can and can't eat
+	+ OOD
+		Short for Online Office for Developers, a simple CRM and project management and payroll management made specifically for software development companies, I used it during my time with Perceptive Mind and whenever I needed a feature I just added it in there
+	+ Plumber's Script
+		A complex quotation calculator for plumbers
+	+ 
+
 + Deploy from github to s3
+https://stelligent.com/2017/09/05/continuous-delivery-to-s3-via-codepipeline-and-codebuild/
