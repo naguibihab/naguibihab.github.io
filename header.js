@@ -112,6 +112,11 @@ document.write(`
 											Meetups <i class="fa fa-external-link"></i>
 										</a>
 									</li>
+									<li class="">
+										<a href="slack.html">
+											Join us on slack
+										</a>
+									</li>
 								</ul>
 							</nav>
 						</div>
