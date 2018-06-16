@@ -68,8 +68,8 @@ document.write(`
 						<div class="header-row">
 							<div class="header-column header-column-center">
 								<div class="header-logo">
-									<a href="index.html">
-										<img alt="Porto" width="45" height="54" src="img/logo-default.png">
+									<a href="index">
+										<img alt="An Idea For An App" width="45" height="54" src="img/logo-default.png">
 									</a>
 								</div>
 							</div>
@@ -83,22 +83,22 @@ document.write(`
 							<nav>
 								<ul class="nav nav-pills" id="mainNav">
 									<li class="">
-										<a href="index.html">
+										<a href="index">
 											Home
 										</a>
 									</li>
 									<li class="">
-										<a href="consulting.html">
+										<a href="consulting">
 											Consulting
 										</a>
 									</li>
 									<li class="">
-										<a href="mywork.html">
+										<a href="mywork">
 											My Work
 										</a>
 									</li>
 									<li class="">
-										<a href="speaking.html">
+										<a href="speaking">
 											Public speaking
 										</a>
 									</li>
@@ -113,7 +113,7 @@ document.write(`
 										</a>
 									</li>
 									<li class="">
-										<a href="slack.html">
+										<a href="slack">
 											Join us on slack
 										</a>
 									</li>
