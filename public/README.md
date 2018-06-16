@@ -11,3 +11,5 @@ To create a new page:
 <script src="footer.js"></script>
 </html>
 ```
+
+And add it in deploy.bat
